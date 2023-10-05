@@ -6,52 +6,176 @@
 ## D287 Java Frameworks Notes
 Each note should include the prompt file name_line number: change.
 
-
+<hr>
 
 ## Part C: Customize HTML Interface
 
 <hr>
 
-### mainscreen.html_9
-* Add a Link tag to add demo.css
-### mainscreen.html_19
-* Refactor H1 TechGear Builders
-### demo.css_1-5
-* Add border-box Remove padding margin
-### mainscreen.html_9
-* Refactor a Link tag to add demo.css
-### mainscreen.html_14
-* Add TechGear Builders Shop to title
+### **Prompt:** _Customize the HTML user interface for the customer's application._
 
+<br>
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _9_
+#### **Change:**  _Add a Link tag to add demo.css_
+
+<br>
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:** _19_
+#### **Change:** _Refactor H1 TechGear Builders_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:** _1-5_
+#### **Change:** _Add border-box Remove padding margin_
+
+<br> 
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _9_
+#### **Change:**  _Add a Link tag to add demo.css Adjust thymeleaf_
+
+<br>
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _14_
+#### **Change:**  _Add TechGear Builders Shop to title_
+
+<br>
+
+
+#### **File Name:** _#_ 
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+<hr>
 
 ## Part D: Add an "About" Page
 
 <hr>
 
-### mainscreen.html_20_24
-* Add Nav element
+### **Prompt:** _Create an About Page_
 
-### mainscreen.html_21_23
-* Add unordered list tag
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _20-24_
+#### **Change:**  _Add Nav element_
 
-### mainscreen.html_21_23
-* Add unordered list tag
+<br>
 
-### mainscreen.html_22
-* Add list element that enclose anchor tags
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _21-23_
+#### **Change:**  _Add unordered list tag_
 
-### about.html_5
-*Add About title
+<br>
 
-### about.html_6
-*Add css link
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _22_
+#### **Change:**  _Add list element that enclose anchor tags_
 
-### about.html_9
-*Add h1 tag About: TechGear Builders
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _5_
+#### **Change:**  _Add About title_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _6_
+#### **Change:**  _Add css link_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _9_
+#### **Change:**  _Add h1 tag About: TechGear Builder_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+<hr>
 
 ## Part E: Add Sample Inventory
+
+<hr>
+
+### **Prompt:** _Add a sample inventory:  five parts and five products_
+
+<br>
+
+<hr>
+
 ## Part F: Add a "Buy" Button 
+
+<hr>
+
+### **Prompt:** _Add a “Buy Now” button to your product list_
+
+<br>
+
+
+
+- The “Buy Now” button must be next to the buttons that update and delete products.
+- The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts. 
+- Display a message that indicates the success or failure of a purchase.
+- 
+<br>
+
+<hr>
+
 ## Part G: Modify Parts to Track Maximum and Minimum Inventory
-## Part H: Add a "Buy Now" Button
+
+<hr>
+
+### **Prompt:**   _Modify the parts to track maximum and minimum inventory_
+
+-    Add additional fields to the part entity for maximum and minimum inventory. 
+- Modify the sample inventory to include the maximum and minimum fields. 
+- Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values. 
+- Rename the file the persistent storage is saved to. 
+- Modify the code to enforce that the inventory is between or at the minimum and maximum value
+
+
+<br>
+
+<hr>
+
+## Part H: Add validation for between or at the maximum and minimum fields
+
+<hr>
+
+### **Prompt:**   _Add validation for between or at the maximum and minimum fields_
+
+- Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts. 
+- Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum. 
+- Display error messages when adding and updating parts if the inventory is greater than the maximum.
+
+<br>
+
+<hr>
+
 ## Part I: Add Unit Test for Maximum and Minimum Fields 
+
+### **Prompt:**   _Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package_
+
+<hr>
+
+
+<br>
+
+<hr>
+
 ## Part J: Remove Unused Validators 
+
+<hr>
+
