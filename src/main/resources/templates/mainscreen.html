@@ -15,23 +15,27 @@
 </head>
 <body>
 
-<section th:id="main-hero">
-    <nav th:id="main-nav">
+
+<nav th:id="main-nav">
+    <div class="nav-content">
         <h1>TechGear Builders Shop</h1>
         <ul>
             <li><a th:href="@{/about.html}">About</a></li>
             <li><a href="#tech-gear-parts">Tech Parts</a></li>
-            <li><a th:href="@{#}">Tech Products</a></li>
+            <li><a href="#tech-gear-products">Tech Products</a></li>
             <li><a th:href="@{#}">Contact Us</a></li>
         </ul>
-        <img th:src="@{/images/main-hero.jpg}" alt="main image hero" />
-    </nav>
-</section>
+    </div >
+</nav>
+<div class="nav-image main-hero">
+    <img th:src="@{/images/main-hero.jpg}" alt="main image hero" />
+</div>
+
 
 <div class="container">
 <!--    <hr>-->
     <section th:id="tech-gear-parts">
-        <div>
+
             <h2>TechGear Parts</h2>
             <form th:action="@{/mainscreen}">
                 Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
@@ -64,7 +68,6 @@
                 </tr>
                 </tbody>
             </table>
-        </div>
     </section>
 
     <section th:id="tech-gear-products">
@@ -97,6 +100,7 @@
             <td th:text="${tempProduct.name}">1</td>
             <td th:text="${tempProduct.price}">1</td>
             <td th:text="${tempProduct.inv}">1</td>
+
             <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
