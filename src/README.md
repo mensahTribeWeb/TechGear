@@ -71,6 +71,18 @@ Each note should include the prompt file name_line number: change.
 
 <br>
 
+#### **File Name:** _demo.css_
+#### **Line Number:**  _62-77_
+#### **Change:**  _Add: css for main-hero section image_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _18-29_
+#### **Change:**  _Add: group nav and image into a main hero section_
+
+<br>
+
 #### **File Name:** _#_
 #### **Line Number:**  _#_
 #### **Change:**  _#_
@@ -118,6 +130,12 @@ Each note should include the prompt file name_line number: change.
 #### **File Name:** _about.html_
 #### **Line Number:**  _9_
 #### **Change:**  _Add h1 tag About: TechGear Builder_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
 
 <br>
 
