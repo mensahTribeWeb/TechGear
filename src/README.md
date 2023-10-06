@@ -177,12 +177,12 @@ _
 <br>
 
 #### **File Name:** _about.html_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
+#### **Line Number:**  _8-9, 10-15, 17-22_
+#### **Change:**  _Add: Controller notion, Service info to obtain about data to pass to the view, setup mapping for http request_
 
 <br>
 
-#### **File Name:** _#_
+#### **File Name:** _about.html_
 #### **Line Number:**  _#_
 #### **Change:**  _#_
 
