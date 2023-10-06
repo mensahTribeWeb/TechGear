@@ -48,14 +48,30 @@ a, a:hover, a:focus, a:active {
 
 /* Style your navigation bar as needed */
 nav {
-  background-color: #f0f0f0;
   padding: 10px;
   border-bottom: 1px solid #ccc;
   width: 100%;
-
+  background-color: rgba(14, 14, 14, 0.93);
+  color: #cccccc;
 }
 
-h1{
+h1 {
 display: flex;
 justify-content: center;
+}
+*******************************************************************************
+                                      Hero
+******************************************************************************
+#main-hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Vertically align content in the center */
+}
+
+#main-hero img {
+    max-width: 100%; /* Ensure the image doesn't exceed the section width */
+    height: auto; /* Maintain image aspect ratio */
+    width: 100vw;
+
 }
