@@ -112,6 +112,13 @@ nav {
     border-bottom: 1px solid #ccc;
 }
 
+.about-us-img img{
+    height: 40vh;
+    width: 100vw;
+
+
+}
+
 *******************************************************************************,
                                      TechGear Parts and products
 ******************************************************************************,
@@ -175,3 +182,7 @@ input {
 #tech-gear-parts {
     border-bottom: 1px solid #ccc;
 }
+
+
+
+
