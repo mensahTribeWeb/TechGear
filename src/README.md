@@ -46,8 +46,32 @@ Each note should include the prompt file name_line number: change.
 
 <br>
 
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _21_
+#### **Change:**  _Refactor: TechGear Builders Shop to title into Nav element_
 
-#### **File Name:** _#_ 
+<br>
+
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _18-16_
+#### **Change:**  _Refactor: remove Nav container out of main container_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _22-24_
+#### **Change:**  _Add: filler links to navigate future page links: techPart, techProducts, Contact Us_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _26, 33-34, 44-47_
+#### **Change:**  _center ul, space links prevent items starting on new line, create uniform links_
+
+<br>
+
+#### **File Name:** _#_
 #### **Line Number:**  _#_
 #### **Change:**  _#_
 
