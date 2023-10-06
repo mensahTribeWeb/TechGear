@@ -20,7 +20,7 @@
         <h1>TechGear Builders Shop</h1>
         <ul>
             <li><a th:href="@{/about.html}">About</a></li>
-            <li><a th:href="@{#}">Tech Parts</a></li>
+            <li><a href="#tech-gear-parts">Tech Parts</a></li>
             <li><a th:href="@{#}">Tech Products</a></li>
             <li><a th:href="@{#}">Contact Us</a></li>
         </ul>
@@ -30,7 +30,8 @@
 
 <div class="container">
     <hr>
-    <h2>Parts</h2>
+    <section th:id="tech-gear-parts">
+    <h2>TechGear Parts</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
@@ -62,6 +63,7 @@
         </tr>
         </tbody>
     </table>
+    </section>
     <h2>Products</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
