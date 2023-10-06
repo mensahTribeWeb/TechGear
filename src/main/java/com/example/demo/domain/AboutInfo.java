@@ -1,6 +1,13 @@
 package com.example.demo.domain;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class AboutInfo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String missionStatement;
     private String aboutParagraph;
 
@@ -14,6 +21,11 @@ public class AboutInfo {
     }
 
     //getters
+
+
+    public Long getId() {
+        return id;
+    }
 
     public String getMissionStatement() {
         return missionStatement;
