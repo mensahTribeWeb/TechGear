@@ -21,9 +21,9 @@
         <h1>TechGear Builders Shop</h1>
         <ul>
             <li><a th:href="@{/about.html}">About</a></li>
-            <li><a href="#tech-gear-parts">Tech Parts</a></li>
-            <li><a href="#tech-gear-products">Tech Products</a></li>
-            <li><a th:href="@{#}">Contact Us</a></li>
+            <li><a class="no-smooth-scroll" href="#tech-gear-parts">Tech Parts</a></li>
+            <li><a class="no-smooth-scroll" href="#tech-gear-products">Tech Products</a></li>
+            <li><a class="no-smooth-scroll" href="http://localhost:8080/">Contact Us</a></li>
         </ul>
     </div >
 </nav>
@@ -68,10 +68,11 @@
                 </tr>
                 </tbody>
             </table>
+        <a href="http://localhost:8080/">Link to Main Screen</a>
     </section>
 
     <section th:id="tech-gear-products">
-    <h2>Products</h2>
+    <h2>TechGear Products</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
         &nbsp;
@@ -108,6 +109,7 @@
         </tr>
         </tbody>
     </table>
+        <a href="http://localhost:8080/">Link to Main Screen</a>
     </section>
 </div>
 </body>
