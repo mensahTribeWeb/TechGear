@@ -1,5 +1,61 @@
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: cornflowerblue;
+}
+
+body{
+    background-color: cornflowerblue;
+    width: 100vw;
+}
+*******************************************************************************
+                                     Nav
+******************************************************************************
+#nav-main {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Horizontally center the contents */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+}
+
+li {
+
+  justify-content: center;
+  margin: 5px;
+  display: inline-block;
+
+}
+
+a {
+  text-decoration: none;
+  color: #333; /* Set the color for your links */
+
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style your navigation bar as needed */
+nav {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+
+}
+
+h1{
+display: flex;
+justify-content: center;
 }
