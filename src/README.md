@@ -200,15 +200,39 @@ _
 
 <br>
 
-#### **File Name:** _about.html_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
+#### **File Name:** _AboutInfo.java_
+#### **Line Number:**  _8-9, 16_
+#### **Change:**  _Add id field with getter_
 
 <br>
 
 #### **File Name:** _about.html_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
+#### **Line Number:**  _36, 39_
+#### **Change:**  _Refactor: place holders for mission statement and about paragraph_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:** 31, 40+_
+#### **Change:**  _Add: about-us-img, remove sample text, missionStatement and About Us Success_
+
+<br>
+
+#### **File Name:** _AboutController.java_
+#### **Line Number:**  _3-4, 19_
+#### **Change:**  _import about and service package, FixMe: fix endpoint about.html, fix name attribute name_
+
+<br>
+
+#### **File Name:** _AboutInfo.java_
+#### **Line Number:**  _3 and 8_
+#### **Change:**  _Refactor: Add Entity annotation_
+
+<br>
+
+#### **File Name:** _AboutServiceImpl_
+#### **Line Number:**  _23-33 , 10_
+#### **Change:**  _Add about data, make field final_
 
 <br>
 
@@ -219,6 +243,12 @@ _
 <hr>
 
 ### **Prompt:** _Add a sample inventory:  five parts and five products_
+
+<br>
+
+#### **File Name:** _AboutService.java_
+#### **Line Number:**  _5-6_
+#### **Change:**  _interface to determine service method_
 
 <br>
 
