@@ -83,6 +83,12 @@ Each note should include the prompt file name_line number: change.
 
 <br>
 
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _23, 33-66, 34_
+#### **Change:**  _Add: link to parts section, Refactor: parts into section w/ tech-gear-parts id, Refactor: techGear part h2_
+
+<br>
+
 #### **File Name:** _#_
 #### **Line Number:**  _#_
 #### **Change:**  _#_
