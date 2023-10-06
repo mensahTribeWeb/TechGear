@@ -176,9 +176,33 @@ _
 
 <br>
 
-#### **File Name:** _about.html_
+#### **File Name:** _AboutController.java_
 #### **Line Number:**  _8-9, 10-15, 17-22_
 #### **Change:**  _Add: Controller notion, Service info to obtain about data to pass to the view, setup mapping for http request_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _3-4_
+#### **Change:**  _import AboutInfo, AboutService_
+
+<br>
+
+#### **File Name:** _AboutInfo.java_
+#### **Line Number:**  _4-5, 8-13, 18-23, 26-34, 36-43_
+#### **Change:**  _Add field for mission statement and about paragraph, Add Constructors, getters, setters, toString_
+
+<br>
+
+#### **File Name:** _AboutRepository.java_
+#### **Line Number:**  _6_
+#### **Change:**  _Extends: the interface extends the Crud Repository_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
 
 <br>
 
