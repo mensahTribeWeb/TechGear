@@ -95,6 +95,31 @@ Each note should include the prompt file name_line number: change.
 
 <br>
 
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _19-31_
+#### **Change:**  _Refactor: place h1 and ul into div w/ nav-container class, add image into its own section w/ nav image main-hero for semantics_
+_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _1-91_
+#### **Change:**  _Refactor: clean code remove notes focus utilize space for h1 and nav section before going back into product and parts section_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _76, 71 26 and 112_
+#### **Change:**  _Add: TechGear Products h2, Add: link back to top of main screen_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
 <hr>
 
 ## Part D: Add an "About" Page
