@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import com.example.demo.domain.AboutInfo;
+import com.example.demo.service.AboutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,10 +16,10 @@ public class AboutController {
         this.aboutService = aboutService;
     }
 
-    @GetMapping("/about")
+    @GetMapping("/about.html")
     public String about(Model model) {
         AboutInfo aboutInfo = aboutService.getAboutInfo();
-        model.addAttibute("aboutInfo", aboutInfo);
+        model.addAttribute("aboutInfo", aboutInfo);
         return "about";
     }
 
