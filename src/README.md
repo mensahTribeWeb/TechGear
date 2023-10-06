@@ -89,9 +89,9 @@ Each note should include the prompt file name_line number: change.
 
 <br>
 
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _70, 70-107_
+#### **Change:**  _Refactor: tech gear parts id semantic section, Add semantic section_ 
 
 <br>
 
