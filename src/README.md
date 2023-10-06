@@ -164,7 +164,19 @@ _
 
 <br>
 
-#### **File Name:** _#_
+#### **File Name:** _about.html_
+#### **Line Number:**  _21, 23, 19-32_
+#### **Change:**  _Refactor: title, Add: link to main.html, bring header from main.html_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _34-65_
+#### **Change:**  _Add: mission statement, about us information_
+
+<br>
+
+#### **File Name:** _about.html_
 #### **Line Number:**  _#_
 #### **Change:**  _#_
 
