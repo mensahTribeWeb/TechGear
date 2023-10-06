@@ -238,6 +238,17 @@ _
 
 <hr>
 
+#### **File Name:** _AboutService.java_
+#### **Line Number:**  _5-6_
+#### **Change:**  _interface to determine service method_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _15-17_
+#### **Change:**  _shorten about image vh_
+
+<br>
 ## Part E: Add Sample Inventory
 
 <hr>
@@ -246,11 +257,6 @@ _
 
 <br>
 
-#### **File Name:** _AboutService.java_
-#### **Line Number:**  _5-6_
-#### **Change:**  _interface to determine service method_
-
-<br>
 
 <hr>
 
