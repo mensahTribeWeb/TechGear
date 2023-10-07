@@ -1,6 +1,6 @@
 # TechGear Builders Shop
 
-*  **Product:** Computers(Desktops, Laptops)
+*  **Product:** Desktops, Laptops, Mobile Phone, Tablet, Monitor
 *  **Parts:** MotherBoards, CPUs, RAM, Hard Drive, Graphic Cards
 * 
 ## D287 Java Frameworks Notes
@@ -111,6 +111,12 @@ _
 #### **File Name:** _mainscreen.html_
 #### **Line Number:**  _76, 71 26 and 112_
 #### **Change:**  _Add: TechGear Products h2, Add: link back to top of main screen_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _16, 162-164, 174_
+#### **Change:**  _Add: background color to contrast container, Add important to emphasis color scheme,Refactor: remove width_
 
 <br>
 
@@ -249,11 +255,38 @@ _
 #### **Change:**  _shorten about image vh_
 
 <br>
+
 ## Part E: Add Sample Inventory
 
 <hr>
 
 ### **Prompt:** _Add a sample inventory:  five parts and five products_
+
+#### **File Name:** _BootStrapData.java_
+#### **Line Number:**  _73-98, 108-112, 115-119, 121-123_
+#### **Change:**  _Add: sampleInventory Method, Add: five part, Add: five products, Add: save items to the repository_
+<br>
+
+#### **File Name:** _ConcretePart.java_
+#### **Line Number:**  _5-13_
+#### **Change:**  _Add: javadocs for concrete class to inherit from abstract class_
+
+<br>
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
 
 <br>
 
