@@ -11,9 +11,10 @@ hr {
 
 body {
     margin: 0;
-    width: 100%;
+    width: 100vw;
     overflow-x: hidden;
-    background-color: #333333;
+    background-color: rgba(31, 31, 31, 0.94) !important;
+
 }
 
 *******************************************************************************,
@@ -152,14 +153,15 @@ form {
     width: 100%;
     max-width: 80%;
     color: #cccccc;
+    table-layout: fixed;
 }
 
 table th,
 table td {
     text-align: center;
-    border: 1px solid #cccccc; /* Add borders to table cells */
-    background-color: #333333;
-    color: #cccccc;
+    border: 1px solid #cccccc !important; /* Add borders to table cells */
+    background-color: #333333 !important;
+    color: #cccccc !important;
 }
 
 
@@ -169,7 +171,7 @@ input {
 
 #tech-gear-parts,
 #tech-gear-products {
-    width: 100vw; /* 100% of the viewport width */
+
     height: 100vh; /* 100% of the viewport height */
     background: #333333;
     color: #cccccc;
