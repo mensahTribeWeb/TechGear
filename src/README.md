@@ -272,24 +272,6 @@ _
 #### **Change:**  _Add: javadocs for concrete class to inherit from abstract class_
 
 <br>
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
 
 <hr>
 
@@ -301,12 +283,58 @@ _
 
 <br>
 
-
-
 - The “Buy Now” button must be next to the buttons that update and delete products.
-- The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts. 
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _109-115_
+#### **Change:**  _Add: new buy button with submit action that states buy now  as table data entry_
+
+<br>
+
+- The button should decrement the inventory of that product by one. 
+- It should not affect the inventory of any of the associated parts. 
+
+#### **File Name:** _BuyProductController.java_
+#### **Line Number:**  _1-52, 26-27, 43-45_
+#### **Change:**  _Add: BuyProductController w/ java docs, construct repository to add and update product information, decrement if > 0_
+
+<br>
 - Display a message that indicates the success or failure of a purchase.
-- 
+
+#### **File Name:** _BuyProductController.java_
+#### **Line Number:**  _45-50_
+#### **Change:**  _redirect to purchaseSuccess.html or purchaseError.html buy interaction_
+
+<br>
+
+#### **File Name:** _PurchaseController.java_
+#### **Line Number:**  _6-32_
+#### **Change:**  _Add: controller to display the success or failure of the product purchases to browser_
+
+<br>
+
+#### **File Name:** purchaseSuccess.html_
+#### **Line Number:**  _1-14_
+#### **Change:**  _Add: html for purchase Success_
+
+<br>
+
+#### **File Name:** purchaseError.html_
+#### **Line Number:**  _1-13_
+#### **Change:**  _Add: html for purchase Error_
+
+<br>
+
+#### **File Name:** purchaseError.html,purchaseSuccess.html_
+#### **Line Number:**  _12_
+#### **Change:**  _Add: Link to main_
+
+<br>
+
+#### **File Name:** purchaseError.html,purchaseSuccess.html_
+#### **Line Number:**  _12_
+#### **Change:**  _Style: remove margin top with inline style assure buttons are next to each other_
+
 <br>
 
 <hr>
