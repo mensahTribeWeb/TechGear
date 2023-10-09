@@ -419,18 +419,6 @@ _
 
 <br>
 
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
 #### **File Name:** _demo.css_
 #### **Line Number:**  _187-188, 191-250_
 #### **Change:**  _Refactor: about h2, p color, prepare for the inhouse and outhouse form css_
@@ -451,9 +439,45 @@ _
 
 ### **Prompt:**   _Add validation for between or at the maximum and minimum fields_
 
-- Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts. 
+- Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
 - Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum. 
+
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
 - Display error messages when adding and updating parts if the inventory is greater than the maximum.
+
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
 
 <br>
 

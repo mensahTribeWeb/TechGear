@@ -184,7 +184,70 @@ input {
 #tech-gear-parts {
     border-bottom: 1px solid #ccc;
 }
+#about-main p, #about-main h2 {
+    color: #cccccc;
+}
 
+/* Common styles for both forms */
+.form-container {
+    background-image: url('static/images/parts-img.jpg'); /* Add your background image path here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
 
+.form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+/* Styles for the Outsourced Part Form */
+#outsourced-form {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Styles for the Inhouse Part Form */
+#inhouse-form {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Additional styles for minInv and maxInv inputs */
+#minInv,
+#maxInv {
+    margin-top: 10px;
+}
+
+/* Apply styles to form buttons */
+.form-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #555;
+}
 
 
