@@ -463,11 +463,18 @@ _
 
 <hr>
 
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
+#### **File Name:** _PartTest.java_
+#### **Line Number:**  _160-166_
+#### **Change:**  _Add: test for min inventory_
 
-<br>>
+<br>
+
+#### **File Name:** _PartTest.java_
+#### **Line Number:**  _169-175_
+#### **Change:**  _Add: test for max inventory_
+
+<br>
+
 
 <hr>
 
@@ -500,11 +507,6 @@ _
 
 <br>
 
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
 
 #### **File Name:** _BuyProductController_
 #### **Line Number:**  _20-23, 29-33, _
@@ -523,3 +525,9 @@ _
 #### **Change:**  _Refactor: due to be using for two instances Add: javadocs_
 
 <br>
+
+### Web Links
+
+#### GitLab:  https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks.git
+
+#### Repository Graph: https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks/-/network/nick-dev
