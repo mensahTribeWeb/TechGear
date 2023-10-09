@@ -9,10 +9,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
- *
- *
- *
+ * Abstract class representing a Part entity in the system.
+ * This class serves as the base class for both InhousePart and OutsourcedPart classes.
  */
 @Entity
 @ValidDeletePart
@@ -28,10 +26,16 @@ public abstract class Part implements Serializable {
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
+
+
     @Min(value = 0, message = "Minimum inventory value must be positive")
-    int minInv;
+    @Column(name = "min_inv")
+    private Integer minInv;
+
+
     @Min(value = 0, message = "Maximum inventory value must be positive")
-    int maxInv;
+    @Column(name = "max_inv")
+    private Integer maxInv;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
@@ -54,19 +58,44 @@ public abstract class Part implements Serializable {
         this.inv = inv;
     }
 
-    public int getMinInv() {
+    /**
+     * Verifies if the inventory falls between the minimum and maximum inventory values.
+     *
+     * @return True if the inventory is within the valid range, otherwise false.
+     */
+    public boolean isInvValid() {
+        return inv >= minInv && inv <= maxInv;
+    }
+    /**
+     * Retrieves the minimum inventory value.
+     *
+     * @return The minimum inventory value.
+     */
+    public Integer getMinInv() {
         return minInv;
     }
-
-    public void setMinInv(int minInv) {
+    /**
+     * Sets the minimum inventory value.
+     *
+     * @param minInv The minimum inventory value to set.
+     */
+    public void setMinInv(Integer minInv) {
         this.minInv = minInv;
     }
-
-    public int getMaxInv() {
+    /**
+     * Retrieves the maximum inventory value.
+     *
+     * @return The maximum inventory value.
+     */
+    public Integer getMaxInv() {
         return maxInv;
     }
-
-    public void setMaxInv(int maxInv) {
+    /**
+     * Sets the maximum inventory value.
+     *
+     * @param maxInv The maximum inventory value to set.
+     */
+    public void setMaxInv(Integer maxInv) {
         this.maxInv = maxInv;
     }
 
