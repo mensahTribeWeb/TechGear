@@ -156,4 +156,22 @@ class PartTest {
         partOut.setId(1l);
         assertEquals(partIn.hashCode(),partOut.hashCode());
     }
+
+    @Test
+    public void testMinimumInventory() {
+        int minimumInv = 10; // Set the minimum inventory value
+        Part partIn = new InhousePart();
+        partIn.setMinInv(minimumInv);
+
+        assertEquals(minimumInv, partIn.getMinInv());
+    }
+
+    @Test
+    public void testMaximumInventory() {
+        int maximumInv = 100; // Set the maximum inventory value
+        Part partOut = new OutsourcedPart();
+        partOut.setMaxInv(maximumInv);
+
+        assertEquals(maximumInv, partOut.getMaxInv());
+    }
 }
