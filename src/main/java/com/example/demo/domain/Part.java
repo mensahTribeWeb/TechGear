@@ -142,9 +142,6 @@ public abstract class Part implements Serializable {
         this.products = products;
     }
 
-    public String toString(){
-        return this.name;
-    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -158,5 +155,18 @@ public abstract class Part implements Serializable {
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
+    }
+
+    @Override
+    public String toString() {
+        return "Part{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", inv=" + inv +
+                ", minInv=" + minInv +
+                ", maxInv=" + maxInv +
+                ", products=" + products +
+                '}';
     }
 }
