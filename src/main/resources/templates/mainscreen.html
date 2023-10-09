@@ -108,7 +108,7 @@
             </td>
             <td>
                 <!-- Buy Now form -->
-                <form th:action="@{/buyProduct}" method="post">
+                <form th:action="@{/buyProduct}" method="post" th:id="buy-now" style="margin-top: 0">
                     <input type="hidden" name="productId" th:value="${tempProduct.id}" />
                     <button type="submit" class="btn btn-success">Buy Now</button>
                 </form>
