@@ -17,7 +17,6 @@ import java.util.Optional;
 public class BuyProductController {
 
     private final ProductRepository productRepository;
-
     /**
      * Constructs a new BuyProductController with the specified ProductRepository.
      *
@@ -27,7 +26,6 @@ public class BuyProductController {
     public BuyProductController(ProductRepository productRepository){
         this.productRepository = productRepository;
     }
-
     /**
      * Handles the purchase of a product.
      *
