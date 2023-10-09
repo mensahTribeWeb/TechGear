@@ -2,7 +2,14 @@
 
 *  **Product:** Desktops, Laptops, Mobile Phone, Tablet, Monitor
 *  **Parts:** MotherBoards, CPUs, RAM, Hard Drive, Graphic Cards
-* 
+
+- outline for notes
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
 ## D287 Java Frameworks Notes
 Each note should include the prompt file name_line number: change.
 
@@ -120,11 +127,7 @@ _
 
 <br>
 
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
 
-<br>
 
 <hr>
 
@@ -345,12 +348,98 @@ _
 
 ### **Prompt:**   _Modify the parts to track maximum and minimum inventory_
 
--    Add additional fields to the part entity for maximum and minimum inventory. 
+- Add additional fields to the part entity for maximum and minimum inventory. 
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _31-32, 33-34, 57-71_
+#### **Change:**  __Add: min inventory, Add: max inventory fields w/ validators, Add: getters and setters__
+
+<br>
+
 - Modify the sample inventory to include the maximum and minimum fields. 
+
+#### **File Name:** _BootStrapData.java_
+#### **Line Number:**  _111-124, 103-104_
+#### **Change:**  _Modify the sample inventory to include the maximum and minimum fields._
+
+<br>
+
 - Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values. 
+
+#### **File Name:** _InhousePartForm.html_
+#### **Line Number:**  _10, 26-34_
+#### **Change:**  _Add: form into a container, Add: min and max form group_
+
+<br>
+
+#### **File Name:** _OutsourcedPartForm.html_
+#### **Line Number:**  _10, 26-39_
+#### **Change:**  _Add: form into a container, Add: min and max form groups with labels with inputs_
+
+<br>
+
+#### **File Name:** _AddInhousePartController_
+#### **Line Number:**  _66-82, 84-88_
+#### **Change:**  _Add: postmapping to handle inhouse updating, save data to the repository_
+
+<br>
+
+#### **File Name:** _AddOutsourcedPartController_
+#### **Line Number:**  _30-31, 33-38, 66-82, 84-88_
+#### **Change:**  _Add: OutsourcePartService, javadocs for showFormAddOutsourcePart, updating outsorcedPart with validation, save updated )utsourcPart_
+
+<br>
+
 - Rename the file the persistent storage is saved to. 
+
+#### **File Name:** _application.properties_
+#### **Line Number:**  _6_
+#### **Change:**  _Refactor: spring-boot-h2-102-db -> spring-boot-h2-db from root_
+
+<br>
+
 - Modify the code to enforce that the inventory is between or at the minimum and maximum value
 
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _61-66_
+#### **Change:**  _Verifies if the inventory falls between the minimum and maximum inventory values._
+
+<br>
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _31-39, 69-98_
+#### **Change:**  _Add: min and max fields, getter and setters,_
+
+<br>
+
+#### **File Name:** _pom.xml_
+#### **Line Number:**  _57-61_
+#### **Change:**  _Add: hibernate dependency_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _187-188, 191-250_
+#### **Change:**  _Refactor: about h2, p color, prepare for the inhouse and outhouse form css_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
 
 <br>
 
