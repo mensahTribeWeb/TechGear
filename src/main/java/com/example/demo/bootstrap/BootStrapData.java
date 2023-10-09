@@ -100,25 +100,37 @@ public class BootStrapData implements CommandLineRunner {
         o.setCompanyName("TechGear Shop");
         o.setName("out test");
         o.setInv(5);
+        o.setMinInv(0); // Set minimum inventory
+        o.setMaxInv(10); // Set maximum inventory
         o.setPrice(20.0);
         o.setId(100L);
         outsourcedPartRepository.save(o);
 
             // Sample Parts
             Part motherboard = new ConcretePart("Motherboard", 50.0, 10);
-            Part cpu = new ConcretePart("CPU", 100.0, 15);
-            Part ram = new ConcretePart("RAM", 30.0, 20);
-            Part hardDrive = new ConcretePart("Hard Drive", 60.0, 12);
-            Part graphicCard = new ConcretePart("Graphic Card", 80.0, 8);
+        motherboard.setMinInv(0); // Set minimum inventory
+        motherboard.setMaxInv(20); // Set maximum inventory
+        ConcretePart cpu = new ConcretePart("CPU", 100.0, 15);
+        cpu.setMinInv(0); // Set minimum inventory
+        cpu.setMaxInv(30); // Set maximum inventory
+        ConcretePart ram = new ConcretePart("RAM", 30.0, 20);
+        ram.setMinInv(0); // Set minimum inventory
+        ram.setMaxInv(40); // Set maximum inventory
+        ConcretePart hardDrive = new ConcretePart("Hard Drive", 60.0, 12);
+        hardDrive.setMinInv(0); // Set minimum inventory
+        hardDrive.setMaxInv(24); // Set maximum inventory
+        ConcretePart graphicCard = new ConcretePart("Graphic Card", 80.0, 8);
+        graphicCard.setMinInv(0); // Set minimum inventory
+        graphicCard.setMaxInv(16); // Set maximum inventory
 
-            // Sample Products
-            Product desktop = new Product("Desktop", 500.0, 5);
-            Product laptop = new Product("Laptop", 700.0, 7);
-            Product mobilePhone = new Product("Mobile Phone", 300.0, 10);
-            Product tablet = new Product("Tablet", 400.0, 8);
-            Product monitor = new Product("Monitor", 200.0, 15);
+        // Sample Products
+        Product desktop = new Product("Desktop", 500.0, 5);
+        Product laptop = new Product("Laptop", 700.0, 7);
+        Product mobilePhone = new Product("Mobile Phone", 300.0, 10);
+        Product tablet = new Product("Tablet", 400.0, 8);
+        Product monitor = new Product("Monitor", 200.0, 15);
 
-            // Save the parts and products to the repositories
+        // Save the parts and products to the repositories
             partRepository.saveAll(List.of(motherboard, cpu, ram, hardDrive, graphicCard));
             productRepository.saveAll(List.of(desktop, laptop, mobilePhone, tablet, monitor));
 
