@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+<div id="outsourced-form" class="form-container">
 <h1>Outsourced Part Detail</h1>
 
 <form action="#" th:action="@{/showFormAddOutPart}" th:object="${outsourcedpart}" method="POST"}>
@@ -23,6 +24,20 @@
     <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
 
     <p><input type="text" th:field="*{companyName}" placeholder="Company Name" class="form-control mb-4 col-4"/></p>
+
+
+        <form action="#" th:action="@{/showFormAddOutPart}" th:object="${outsourcedpart}" method="POST">
+            <div class="form-group">
+                <label for="minInv">Minimum Inventory</label>
+                <input type="number" class="form-control" id="minInv" name="minInv" placeholder="Enter minimum inventory">
+            </div>
+            <div class="form-group">
+                <label for="maxInv">Maximum Inventory</label>
+                <input type="number" class="form-control" id="maxInv" name="maxInv" placeholder="Enter maximum inventory">
+            </div>
+        </form>
+    </div>
+
 
 <p><input type="submit" value="Submit" /></p>
 </form>
