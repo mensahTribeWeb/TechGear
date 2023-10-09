@@ -4,6 +4,7 @@
 *  **Parts:** MotherBoards, CPUs, RAM, Hard Drive, Graphic Cards
 
 - outline for notes
+- 
 #### **File Name:** _#_
 #### **Line Number:**  _#_
 #### **Change:**  _#_
@@ -259,6 +260,10 @@ _
 
 <br>
 
+#### **File Name:** _about.html_
+#### **Line Number:**  _24-25_
+#### **Change:**  _FixMe: fix added links_
+
 ## Part E: Add Sample Inventory
 
 <hr>
@@ -440,46 +445,15 @@ _
 ### **Prompt:**   _Add validation for between or at the maximum and minimum fields_
 
 - Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-- Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum. 
-
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
+- Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 - Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
-
-<br>
-
-#### **File Name:** _#_
-#### **Line Number:**  _#_
-#### **Change:**  _#_
+#### **File Name:** _Part.java_
+#### **Line Number:**  _28, 30_
+#### **Change:**  _write field for max_inventory, validation message to not exceed max value_
 
 <br>
+
 
 <hr>
 
@@ -489,8 +463,11 @@ _
 
 <hr>
 
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
 
-<br>
+<br>>
 
 <hr>
 
@@ -498,3 +475,51 @@ _
 
 <hr>
 
+
+#### **File Name:** _PriceProductValidator.java_
+#### **Line Number:**  _16-43, 55-61_
+#### **Change:**  _2usages Refactor: javadocs_
+
+<br>
+
+#### **File Name:** _ValidDeletePart.java_
+#### **Line Number:**  _5-30_
+#### **Change:**  _2 usages, Refactor: write javadocs_
+
+<br>
+
+#### **File Name:** _ValidEnufParts.java_
+#### **Line Number:**  _10-18_
+#### **Change:**  _4 usages, Add javadocs_
+
+<br>
+
+#### **File Name:** _ValidProductPrice.java_
+#### **Line Number:**  _10-18_
+#### **Change:**  _6usages, Add: javadocs since in usage_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+#### **File Name:** _BuyProductController_
+#### **Line Number:**  _20-23, 29-33, _
+#### **Change:**  _Refactor: add javadocs_
+
+<br>
+
+#### **File Name:** _ValidDeletePart.java_
+#### **Line Number:**  _remove_
+#### **Change:**  _Refactor: remove due to non usage, I wrote a java doc initially_
+
+<br>
+
+#### **File Name:** _EnufPartsValidator.java_
+#### **Line Number:**  _13-15, 21-25, 30-37_
+#### **Change:**  _Refactor: due to be using for two instances Add: javadocs_
+
+<br>
