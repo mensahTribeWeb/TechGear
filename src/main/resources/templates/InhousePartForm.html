@@ -7,27 +7,39 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Inhouse Part Detail</h1>
+<div id="inhouse-form" class="form-container">
+    <h1 class="form-title">Inhouse Part Detail</h1>
+
 <form action="#" th:action="@{/showFormAddInPart}" th:object="${inhousepart}" method="POST"}>
 
-<!-- Add hidden form field to handle update -->
+    <!-- Add hidden form field to handle update -->
     <p><input type="hidden" th:field="*{id}"/></p>
 
-<p><input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
+    <p><input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
 
-<p><input type="text" path="price" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
-<p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
+    <p><input type="text" path="price" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
+    <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
 
-<p><input type="text" path="inv" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
+    <p><input type="text" path="inv" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
     <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
 
     <p><input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/></p>
 
-<p><input type="submit" value="Submit" /></p>
+    <div class="form-group">
+        <label for="minInv">Minimum Inventory</label>
+        <input type="number" class="form-control" id="minInv" name="minInv" placeholder="Enter minimum inventory">
+    </div>
+    <div class="form-group">
+        <label for="maxInv">Maximum Inventory</label>
+        <input type="number" class="form-control" id="maxInv" name="maxInv" placeholder="Enter maximum inventory">
+    </div>
+
+    <p><input type="submit" value="Submit" /></p>
 </form>
 <p><errors path="price" cssClass=""error/><p>
 
-<a href="http://localhost:8080/">Link
-    to Main Screen</a>
+    <a href="http://localhost:8080/">Link
+        to Main Screen</a>
+</div>
 </body>
 </html>
