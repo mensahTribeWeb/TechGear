@@ -8,10 +8,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * Custom validation annotation to ensure that the price of a product is greater than or equal
+ * to the sum of the prices of its associated parts.
  *
+ * This annotation should be used on the Product entity class and is validated
+ * using the PriceProductValidator class.
  *
- *
- *
+ * @see com.example.demo.validators.PriceProductValidator
  */
 @Constraint(validatedBy = {PriceProductValidator.class})
 @Target({ElementType.TYPE})
