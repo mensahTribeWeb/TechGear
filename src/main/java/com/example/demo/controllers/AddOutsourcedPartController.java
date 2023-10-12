@@ -37,31 +37,19 @@ public class AddOutsourcedPartController {
      * @return The name of the HTML template for the Outsourced Part form.
      */
     @GetMapping("/showFormAddOutPart")
-    public String showFormAddOutsourcedPart(Model theModel){
-        Part part=new OutsourcedPart();
-        theModel.addAttribute("outsourcedpart",part);
+    public String showFormAddOutsourcedPart(Model theModel) {
+        theModel.addAttribute("outsourcedpart", new OutsourcedPart());
         return "OutsourcedPartForm";
     }
-    /**
-     * Handles the submission of the Outsourced Part form.
-     *
-     * @param part            The Outsourced Part to be added.
-     * @param bindingResult   The binding result for validation.
-     * @param theModel        The model to add attributes for the view.
-     * @return The appropriate view based on validation results.
-     */
+
     @PostMapping("/showFormAddOutPart")
-    public String submitForm(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart part, BindingResult bindingResult, Model theModel){
-        theModel.addAttribute("outsourcedpart",part);
-        if(bindingResult.hasErrors()){
+    public String submitForm(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart outsourcedPart, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return "OutsourcedPartForm";
+        } else {
+            outsourcedPartService.save(outsourcedPart);
+            return "confirmationaddpart";
         }
-        else{
-        OutsourcedPartService repo=context.getBean(OutsourcedPartServiceImpl.class);
-        OutsourcedPart op=repo.findById((int)part.getId());
-        if(op!=null)part.setProducts(op.getProducts());
-            repo.save(part);
-        return "confirmationaddpart";}
     }
     /**
      * Handles saving an Outsourced Part, performing additional validation.
