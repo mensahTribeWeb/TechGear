@@ -10,4 +10,5 @@ import org.springframework.data.repository.CrudRepository;
  *
  */
 public interface OutsourcedPartRepository extends CrudRepository<OutsourcedPart,Long> {
+    OutsourcedPart findByName(String outTest);
 }
