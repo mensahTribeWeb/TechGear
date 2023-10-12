@@ -1,20 +1,14 @@
 package com.example.demo.controllers;
 
 import com.example.demo.domain.InhousePart;
-import com.example.demo.domain.Part;
 import com.example.demo.service.InhousePartService;
-import com.example.demo.service.InhousePartServiceImpl;
-import com.example.demo.service.PartService;
-import com.example.demo.service.PartServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -23,8 +17,6 @@ import javax.validation.Valid;
  */
 @Controller
 public class AddInhousePartController{
-    @Autowired
-    private ApplicationContext context;
 
     @Autowired
     private InhousePartService inhousePartService;
@@ -37,31 +29,27 @@ public class AddInhousePartController{
      */
     @GetMapping("/showFormAddInPart")
     public String showFormAddInhousePart(Model theModel){
-        InhousePart inhousepart=new InhousePart();
+        InhousePart inhousepart= new InhousePart();
         theModel.addAttribute("inhousepart",inhousepart);
         return "InhousePartForm";
     }
     /**
      * Handles the submission of the Inhouse Part form.
      *
-     * @param part             The Inhouse Part to be added.
-     * @param theBindingResult The binding result for validation.
-     * @param theModel         The model to add attributes for the view.
-     * @return The appropriate view based on validation results.
+     * @param inhousePart    The Inhouse Part to be added, automatically populated from the form.
+     * @param bindingResult  The binding result for validation.
+     * @return The appropriate view based on validation results, "InhousePartForm" if there are errors,
+     *         "confirmationaddpart" if the form is successfully submitted and the Inhouse Part is saved.
      */
     @PostMapping("/showFormAddInPart")
-    public String submitForm(@Valid @ModelAttribute("inhousepart") InhousePart part, BindingResult theBindingResult, Model theModel){
-        theModel.addAttribute("inhousepart",part);
-        if(theBindingResult.hasErrors()){
+    public String submitForm(@Valid @ModelAttribute("inhousepart") InhousePart inhousePart, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return "InhousePartForm";
+        } else {
+            // You don't need to manually create the part or get it from the context
+            inhousePartService.save(inhousePart);
+            return "confirmationaddpart";
         }
-        else{
-        InhousePartService repo=context.getBean(InhousePartServiceImpl.class);
-        InhousePart ip=repo.findById((int)part.getId());
-        if(ip!=null)part.setProducts(ip.getProducts());
-        repo.save(part);
-
-        return "confirmationaddpart";}
     }
     /**
      * Handles saving an Inhouse Part, performing additional validation.
