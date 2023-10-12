@@ -8,10 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- *
- *
- *
- *
+ * Service interface for managing Part entities.
  */
 @Service
 public interface PartService {
