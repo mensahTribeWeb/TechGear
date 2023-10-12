@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
 import com.example.demo.repositories.PartRepository;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- *
- *
- *
- *
+ * Service interface for managing Part entities.
  */
 
 @Service
@@ -21,7 +19,6 @@ public class PartServiceImpl implements PartService{
         private PartRepository partRepository;
 
         @Autowired
-
     public PartServiceImpl(PartRepository partRepository) {
         this.partRepository = partRepository;
     }
@@ -36,6 +33,24 @@ public class PartServiceImpl implements PartService{
         }
         return (List<Part>) partRepository.findAll();
     }
+    /**
+     * Retrieves a Part entity along with its associated products.
+     *
+     * @param partId The unique identifier of the Part entity.
+     * @return The Part entity with its associated products, or null if not found.
+     */
+    @Override
+    public Part getPartWithProducts(Long partId) {
+        Part part = partRepository.findById((long) Math.toIntExact(partId)).orElse(null);
+
+        if (part != null) {
+            // Reattach the entity to initialize the collection
+            Hibernate.initialize(part.getProducts());
+        }
+
+        return part;
+    }
+
     @Override
     public Part findById(int theId) {
         Long theIdl=(long)theId;
