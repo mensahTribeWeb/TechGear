@@ -7,15 +7,11 @@ import com.example.demo.domain.Product;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
-import com.example.demo.service.OutsourcedPartService;
-import com.example.demo.service.OutsourcedPartServiceImpl;
-import com.example.demo.service.ProductService;
-import com.example.demo.service.ProductServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * This class serves as a Spring Boot component that implements the CommandLineRunner
@@ -40,6 +36,7 @@ public class BootStrapData implements CommandLineRunner {
      * @param productRepository        The repository for managing Product entities.
      * @param outsourcedPartRepository The repository for managing OutsourcedPart entities.
      */
+    @Autowired
     public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
@@ -58,35 +55,27 @@ public class BootStrapData implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
-        // Check if both parts and products lists are empty before adding the sample inventory
         if (partRepository.count() == 0 && productRepository.count() == 0) {
-            // Add sample inventory
             addSampleInventory();
         }
 
-
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
-        }
+        OutsourcedPart thePart = outsourcedPartRepository.findByName("out test");
 
         if (thePart != null) {
-        System.out.println(thePart.getCompanyName());
+            System.out.println(thePart.getCompanyName());
         } else {
             System.out.println("No OutsourcedPart with the name 'out test' found.");
         }
-
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
+        List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+        for (OutsourcedPart part : outsourcedParts) {
+            System.out.println(part.getName() + " " + part.getCompanyName());
         }
 
         System.out.println("Started in Bootstrap");
-        System.out.println("Number of Products"+productRepository.count());
+        System.out.println("Number of Products: " + productRepository.count());
         System.out.println(productRepository.findAll());
-        System.out.println("Number of Parts"+partRepository.count());
+        System.out.println("Number of Parts: " + partRepository.count());
         System.out.println(partRepository.findAll());
-
     }
     /**
      * This method initializes and adds sample inventory data to the database if both
