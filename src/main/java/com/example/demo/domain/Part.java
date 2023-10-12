@@ -164,9 +164,6 @@ public abstract class Part implements Serializable {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", inv=" + inv +
-                ", minInv=" + minInv +
-                ", maxInv=" + maxInv +
-                ", products=" + products +
                 '}';
     }
 }
