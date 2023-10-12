@@ -1,26 +1,571 @@
-<strong>** DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. ** </strong>
+# TechGear Builders Shop
 
-# WESTERN GOVERNOR UNIVERSITY 
-## D287 – JAVA FRAMEWORKS
-Welcome to Java Frameworks! This is an opportunity for students to implement user interfaces and learn to leverage existing frameworks, assets, and content for object-oriented programming.
-FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
-## BASIC INSTRUCTIONS
-For this project, you will use the Integrated Development Environment (IDE) link in the web links section of this assessment to install the IDE, IntelliJ IDEA (Ultimate Edition). All relevant links are on the course page. Please refer to the course of study for specific links. You will sign up for a free student license using your WGU.edu email address. Please see the “IntelliJ Ultimate Edition Instructions” attachment for instructions on how do this. Next you will download the “Inventory Management Application Template Code” provided in the web links section and open it in IntelliJ IDEA (Ultimate Edition). You will upload this project to a private external GitLab repository and backup regularly. As a part of this, you have been provided with a base code (starting point). 
+*  **Product:** Desktops, Laptops, Mobile Phone, Tablet, Monitor
+*  **Parts:** MotherBoards, CPUs, RAM, Hard Drive, Graphic Cards
 
-## SUPPLEMENTAL RESOURCES  
-1.	How to clone a project to IntelliJ using Git?
+- outline for notes
+- 
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
 
-> Ensure that you have Git installed on your system and that IntelliJ is installed using [Toolbox](https://www.jetbrains.com/toolbox-app/). Make sure that you are using version 2022.3.2. Once this has been confirmed, click the clone button and use the 'IntelliJ IDEA (HTTPS)' button. This will open IntelliJ with a prompt to clone the proejct. Save it in a safe location for the directory and press clone. IntelliJ will prompt you for your credentials. Enter in your WGU Credentials and the project will be cloned onto your local machine.  
+<br>
 
-2. How to create a branch and start Development?
+## D287 Java Frameworks Notes
+Each note should include the prompt file name_line number: change.
 
-- GitLab method
-> Press the '+' button located near your branch name. In the dropdown list, press the 'New branch' button. This will allow you to create a name for your branch. Once the branch has been named, you can select 'Create Branch' to push the branch to your repository.
+<hr>
 
-- IntelliJ method
-> In IntelliJ, Go to the 'Git' button on the top toolbar. Select the new branch option and create a name for the branch. Make sure checkout branch is selected and press create. You can now add a commit message and push the new branch to the local repo.
+## Part C: Customize HTML Interface
 
-## SUPPORT
-If you need additional support, please navigate to the course page and reach out to your course instructor.
-## FUTURE USE
-Take this opportunity to create or add to a simple resume portfolio to highlight and showcase your work for future use in career search, experience, and education!
+<hr>
+
+### **Prompt:** _Customize the HTML user interface for the customer's application._
+
+<br>
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _9_
+#### **Change:**  _Add a Link tag to add demo.css_
+
+<br>
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:** _19_
+#### **Change:** _Refactor H1 TechGear Builders_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:** _1-5_
+#### **Change:** _Add border-box Remove padding margin_
+
+<br> 
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _9_
+#### **Change:**  _Add a Link tag to add demo.css Adjust thymeleaf_
+
+<br>
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _14_
+#### **Change:**  _Add TechGear Builders Shop to title_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _21_
+#### **Change:**  _Refactor: TechGear Builders Shop to title into Nav element_
+
+<br>
+
+
+#### **File Name:** _mainscreen.html_ 
+#### **Line Number:**  _18-16_
+#### **Change:**  _Refactor: remove Nav container out of main container_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _22-24_
+#### **Change:**  _Add: filler links to navigate future page links: techPart, techProducts, Contact Us_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _26, 33-34, 44-47_
+#### **Change:**  _center ul, space links prevent items starting on new line, create uniform links_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _62-77_
+#### **Change:**  _Add: css for main-hero section image_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _18-29_
+#### **Change:**  _Add: group nav and image into a main hero section_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _23, 33-66, 34_
+#### **Change:**  _Add: link to parts section, Refactor: parts into section w/ tech-gear-parts id, Refactor: techGear part h2_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _70, 70-107_
+#### **Change:**  _Refactor: tech gear parts id semantic section, Add semantic section_ 
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _19-31_
+#### **Change:**  _Refactor: place h1 and ul into div w/ nav-container class, add image into its own section w/ nav image main-hero for semantics_
+_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _1-91_
+#### **Change:**  _Refactor: clean code remove notes focus utilize space for h1 and nav section before going back into product and parts section_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _76, 71 26 and 112_
+#### **Change:**  _Add: TechGear Products h2, Add: link back to top of main screen_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _16, 162-164, 174_
+#### **Change:**  _Add: background color to contrast container, Add important to emphasis color scheme,Refactor: remove width_
+
+<br>
+
+
+
+<hr>
+
+## Part D: Add an "About" Page
+
+<hr>
+
+### **Prompt:** _Create an About Page_
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _20-24_
+#### **Change:**  _Add Nav element_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _21-23_
+#### **Change:**  _Add unordered list tag_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _22_
+#### **Change:**  _Add list element that enclose anchor tags_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _5_
+#### **Change:**  _Add About title_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _6_
+#### **Change:**  _Add css link_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _9_
+#### **Change:**  _Add h1 tag About: TechGear Builder_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _21, 23, 19-32_
+#### **Change:**  _Refactor: title, Add: link to main.html, bring header from main.html_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _34-65_
+#### **Change:**  _Add: mission statement, about us information_
+
+<br>
+
+#### **File Name:** _AboutController.java_
+#### **Line Number:**  _8-9, 10-15, 17-22_
+#### **Change:**  _Add: Controller notion, Service info to obtain about data to pass to the view, setup mapping for http request_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _3-4_
+#### **Change:**  _import AboutInfo, AboutService_
+
+<br>
+
+#### **File Name:** _AboutInfo.java_
+#### **Line Number:**  _4-5, 8-13, 18-23, 26-34, 36-43_
+#### **Change:**  _Add field for mission statement and about paragraph, Add Constructors, getters, setters, toString_
+
+<br>
+
+#### **File Name:** _AboutRepository.java_
+#### **Line Number:**  _6_
+#### **Change:**  _Extends: the interface extends the Crud Repository_
+
+<br>
+
+#### **File Name:** _AboutInfo.java_
+#### **Line Number:**  _8-9, 16_
+#### **Change:**  _Add id field with getter_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _36, 39_
+#### **Change:**  _Refactor: place holders for mission statement and about paragraph_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:** 31, 40+_
+#### **Change:**  _Add: about-us-img, remove sample text, missionStatement and About Us Success_
+
+<br>
+
+#### **File Name:** _AboutController.java_
+#### **Line Number:**  _3-4, 19_
+#### **Change:**  _import about and service package, FixMe: fix endpoint about.html, fix name attribute name_
+
+<br>
+
+#### **File Name:** _AboutInfo.java_
+#### **Line Number:**  _3 and 8_
+#### **Change:**  _Refactor: Add Entity annotation_
+
+<br>
+
+#### **File Name:** _AboutServiceImpl_
+#### **Line Number:**  _23-33 , 10_
+#### **Change:**  _Add about data, make field final_
+
+<br>
+
+<hr>
+
+#### **File Name:** _AboutService.java_
+#### **Line Number:**  _5-6_
+#### **Change:**  _interface to determine service method_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _15-17_
+#### **Change:**  _shorten about image vh_
+
+<br>
+
+#### **File Name:** _about.html_
+#### **Line Number:**  _24-25_
+#### **Change:**  _FixMe: fix added links_
+
+## Part E: Add Sample Inventory
+
+<hr>
+
+### **Prompt:** _Add a sample inventory:  five parts and five products_
+
+#### **File Name:** _BootStrapData.java_
+#### **Line Number:**  _73-98, 108-112, 115-119, 121-123_
+#### **Change:**  _Add: sampleInventory Method, Add: five part, Add: five products, Add: save items to the repository_
+<br>
+
+#### **File Name:** _ConcretePart.java_
+#### **Line Number:**  _5-13_
+#### **Change:**  _Add: javadocs for concrete class to inherit from abstract class_
+
+<br>
+
+<hr>
+
+## Part F: Add a "Buy" Button 
+
+<hr>
+
+### **Prompt:** _Add a “Buy Now” button to your product list_
+
+<br>
+
+- The “Buy Now” button must be next to the buttons that update and delete products.
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _109-115_
+#### **Change:**  _Add: new buy button with submit action that states buy now  as table data entry_
+
+<br>
+
+- The button should decrement the inventory of that product by one. 
+- It should not affect the inventory of any of the associated parts. 
+
+#### **File Name:** _BuyProductController.java_
+#### **Line Number:**  _1-52, 26-27, 43-45_
+#### **Change:**  _Add: BuyProductController w/ java docs, construct repository to add and update product information, decrement if > 0_
+
+<br>
+- Display a message that indicates the success or failure of a purchase.
+
+#### **File Name:** _BuyProductController.java_
+#### **Line Number:**  _45-50_
+#### **Change:**  _redirect to purchaseSuccess.html or purchaseError.html buy interaction_
+
+<br>
+
+#### **File Name:** _PurchaseController.java_
+#### **Line Number:**  _6-32_
+#### **Change:**  _Add: controller to display the success or failure of the product purchases to browser_
+
+<br>
+
+#### **File Name:** purchaseSuccess.html_
+#### **Line Number:**  _1-14_
+#### **Change:**  _Add: html for purchase Success_
+
+<br>
+
+#### **File Name:** purchaseError.html_
+#### **Line Number:**  _1-13_
+#### **Change:**  _Add: html for purchase Error_
+
+<br>
+
+#### **File Name:** purchaseError.html,purchaseSuccess.html_
+#### **Line Number:**  _12_
+#### **Change:**  _Add: Link to main_
+
+<br>
+
+#### **File Name:** purchaseError.html,purchaseSuccess.html_
+#### **Line Number:**  _12_
+#### **Change:**  _Style: remove margin top with inline style assure buttons are next to each other_
+
+<br>
+
+<hr>
+
+## Part G: Modify Parts to Track Maximum and Minimum Inventory
+
+<hr>
+
+### **Prompt:**   _Modify the parts to track maximum and minimum inventory_
+
+- Add additional fields to the part entity for maximum and minimum inventory. 
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _31-32, 33-34, 57-71_
+#### **Change:**  __Add: min inventory, Add: max inventory fields w/ validators, Add: getters and setters__
+
+<br>
+
+- Modify the sample inventory to include the maximum and minimum fields. 
+
+#### **File Name:** _BootStrapData.java_
+#### **Line Number:**  _111-124, 103-104_
+#### **Change:**  _Modify the sample inventory to include the maximum and minimum fields._
+
+<br>
+
+- Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values. 
+
+#### **File Name:** _InhousePartForm.html_
+#### **Line Number:**  _10, 26-34_
+#### **Change:**  _Add: form into a container, Add: min and max form group_
+
+<br>
+
+#### **File Name:** _OutsourcedPartForm.html_
+#### **Line Number:**  _10, 26-39_
+#### **Change:**  _Add: form into a container, Add: min and max form groups with labels with inputs_
+
+<br>
+
+#### **File Name:** _AddInhousePartController_
+#### **Line Number:**  _66-82, 84-88_
+#### **Change:**  _Add: postmapping to handle inhouse updating, save data to the repository_
+
+<br>
+
+#### **File Name:** _AddOutsourcedPartController_
+#### **Line Number:**  _30-31, 33-38, 66-82, 84-88_
+#### **Change:**  _Add: OutsourcePartService, javadocs for showFormAddOutsourcePart, updating outsorcedPart with validation, save updated )utsourcPart_
+
+<br>
+
+- Rename the file the persistent storage is saved to. 
+
+#### **File Name:** _application.properties_
+#### **Line Number:**  _6_
+#### **Change:**  _Refactor: spring-boot-h2-102-db -> spring-boot-h2-db from root_
+
+<br>
+
+- Modify the code to enforce that the inventory is between or at the minimum and maximum value
+
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _61-66_
+#### **Change:**  _Verifies if the inventory falls between the minimum and maximum inventory values._
+
+<br>
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _31-39, 69-98_
+#### **Change:**  _Add: min and max fields, getter and setters,_
+
+<br>
+
+#### **File Name:** _pom.xml_
+#### **Line Number:**  _57-61_
+#### **Change:**  _Add: hibernate dependency_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _187-188, 191-250_
+#### **Change:**  _Refactor: about h2, p color, prepare for the inhouse and outhouse form css_
+
+<br>
+
+#### **File Name:** _#_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+<br>
+
+<hr>
+
+## Part H: Add validation for between or at the maximum and minimum fields
+
+<hr>
+
+### **Prompt:**   _Add validation for between or at the maximum and minimum fields_
+
+- Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
+- Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
+- Display error messages when adding and updating parts if the inventory is greater than the maximum.
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _28, 30_
+#### **Change:**  _write field for max_inventory, validation message to not exceed max value_
+
+<br>
+
+
+<hr>
+
+## Part I: Add Unit Test for Maximum and Minimum Fields 
+
+### **Prompt:**   _Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package_
+
+<hr>
+
+#### **File Name:** _PartTest.java_
+#### **Line Number:**  _160-166_
+#### **Change:**  _Add: test for min inventory_
+
+<br>
+
+#### **File Name:** _PartTest.java_
+#### **Line Number:**  _169-175_
+#### **Change:**  _Add: test for max inventory_
+
+<br>
+
+
+<hr>
+
+## Part J: Remove Unused Validators 
+
+<hr>
+
+
+#### **File Name:** _PriceProductValidator.java_
+#### **Line Number:**  _16-43, 55-61_
+#### **Change:**  _2usages Refactor: javadocs_
+
+<br>
+
+#### **File Name:** _ValidDeletePart.java_
+#### **Line Number:**  _5-30_
+#### **Change:**  _2 usages, Refactor: write javadocs_
+
+<br>
+
+#### **File Name:** _ValidEnufParts.java_
+#### **Line Number:**  _10-18_
+#### **Change:**  _4 usages, Add javadocs_
+
+<br>
+
+#### **File Name:** _ValidProductPrice.java_
+#### **Line Number:**  _10-18_
+#### **Change:**  _6usages, Add: javadocs since in usage_
+
+<br>
+
+
+#### **File Name:** _BuyProductController_
+#### **Line Number:**  _20-23, 29-33, _
+#### **Change:**  _Refactor: add javadocs_
+
+<br>
+
+#### **File Name:** _ValidDeletePart.java_
+#### **Line Number:**  _remove_
+#### **Change:**  _Refactor: remove due to non usage, I wrote a java doc initially_
+
+<br>
+
+#### **File Name:** _EnufPartsValidator.java_
+#### **Line Number:**  _13-15, 21-25, 30-37_
+#### **Change:**  _Refactor: due to be using for two instances Add: javadocs_
+
+<br>
+
+## Refactor
+
+#### **File Name:** _BootStrapData.java_
+#### **Line Number:**  _10, 39_
+#### **Change:**  _Add: annotation for autowired and import library_
+
+#### **File Name:** _AddInhousePartController.java_
+#### **Line Number:**  _39-42_
+#### **Change:**  _Add: javadocs for submitform() optimize libraries_
+
+#### **File Name:** _AddOutsourcedPartController.java_
+#### **Line Number:**  _49-51_
+#### **Change:**  _Add: else statement for outsourcePartService_
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _161_
+#### **Change:**  _Refactor: to string method_
+
+#### **File Name:** _OutsourcedPartRepository.java_
+#### **Line Number:**  _13_
+#### **Change:**  _Add: OutsourcedPart findByName(String outTest)_
+
+#### **File Name:** _PartService.java_
+#### **Line Number:**  _11_
+#### **Change:**  _Add: javadocs_
+
+#### **File Name:** _PartServiceImpl.java_
+#### **Line Number:**  _13-15, 36-52_
+#### **Change:**  _Add: javadoc and  getPartWithProducts_
+
+#### **File Name:** _README.md_
+#### **Line Number:**  _#_
+#### **Change:**  _#_
+
+
+
+### Web Links
+
+#### GitLab:  https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks.git
+
+#### Repository Graph: https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks/-/network/nick-dev
+
+#### ReadMe: 
