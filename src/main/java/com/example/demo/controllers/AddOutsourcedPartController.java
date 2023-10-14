@@ -1,12 +1,7 @@
 package com.example.demo.controllers;
 
-import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
-import com.example.demo.domain.Part;
 import com.example.demo.service.OutsourcedPartService;
-import com.example.demo.service.OutsourcedPartServiceImpl;
-import com.example.demo.service.PartService;
-import com.example.demo.service.PartServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -15,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -54,8 +48,8 @@ public class AddOutsourcedPartController {
     /**
      * Handles saving an Outsourced Part, performing additional validation.
      *
-     * @param outsourcedPart  The Outsourced Part to be saved.
-     * @param bindingResult   The binding result for validation.
+     * @param outsourcedPart   The Outsourced Part to be saved.
+     * @param bindingResult    The binding result for validation.
      * @return The appropriate view based on validation results.
      */
     @PostMapping("/saveOutsourcedPart")
@@ -74,6 +68,20 @@ public class AddOutsourcedPartController {
 
         return "redirect:/outsourcedparts/list";
     }
+    @PostMapping("/addOutsourcedPart")
+    public String addOutsourcedPart(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart outsourcedPart, BindingResult bindingResult, Model theModel) {
+        if (bindingResult.hasErrors()) {
+            return "OutsourcedPartForm";
+        }
 
-
+        // Check if inventory is within the valid range
+        if (outsourcedPart.getInv() < outsourcedPart.getMinInv() || outsourcedPart.getInv() > outsourcedPart.getMaxInv()) {
+            // Display an error message
+            theModel.addAttribute("errorMessage", "Error: Inventory couldn't be larger than the maximum or smaller than the minimum.");
+            return "error-page"; // Redirect to an error page
+        } else {
+            outsourcedPartService.save(outsourcedPart);
+            return "success-page"; // Redirect to a success page
+        }
+    }
 }
