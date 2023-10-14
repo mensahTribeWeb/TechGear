@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.Part;
-import com.example.demo.domain.Product;
 import com.example.demo.repositories.PartRepository;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
