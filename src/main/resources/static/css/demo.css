@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+hr {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: rgba(31, 31, 31, 0.94) !important;
+
+}
+
+*******************************************************************************,
+                                     Nav
+******************************************************************************,
+nav {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    max-width: 100%;
+    background-color: rgba(14, 14, 14, 0.93);
+    color: #cccccc;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    width: 100vw;
+}
+
+#main-nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgba(14, 14, 14, 0.93);
+    color: #cccccc;
+    margin: 0;
+    width: 100%;
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+}
+
+#main-nav li {
+  margin: 10px;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+#main-nav a,
+#main-nav a:hover,
+#main-nav a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main-nav h1 {
+display: flex;
+justify-content: center;
+margin-right: 10px;
+
+}
+
+.no-smooth-scroll {
+    scroll-behavior: auto;
+}
+
+nav, .container {
+    scroll-snap-type: y mandatory;
+}
+
+nav {
+    scroll-snap-align: start;
+}
+
+.container {
+    scroll-snap-align: start;
+}
+
+*******************************************************************************,
+                                      Hero
+******************************************************************************,
+
+.main-hero {
+    display: flex;
+}
+
+.main-hero img {
+    max-width: 100vw;
+    height: 96vh;
+    width: 100vw;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.about-us-img img{
+    height: 40vh;
+    width: 100vw;
+
+
+}
+
+*******************************************************************************,
+                                     TechGear Parts and products
+******************************************************************************,
+
+.container {
+    scroll-snap-align: start;
+    max-width: 100vw;
+    display: flex;
+
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+    background: #333333;
+    color: #cccccc;
+    overflow-x: hidden;
+    margin: 0 auto;
+    width: 800px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    color: #cccccc;
+    margin-top: 50px;
+}
+
+.table {
+    width: 100%;
+    max-width: 80%;
+    color: #cccccc;
+    table-layout: fixed;
+}
+
+table th,
+table td {
+    text-align: center;
+    border: 1px solid #cccccc !important; /* Add borders to table cells */
+    background-color: #333333 !important;
+    color: #cccccc !important;
+}
+
+
+input {
+    text-align: center;
+}
+
+#tech-gear-parts,
+#tech-gear-products {
+
+    height: 100vh; /* 100% of the viewport height */
+    background: #333333;
+    color: #cccccc;
+    text-align: center; /* Center-align its child elements */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+#tech-gear-parts {
+    border-bottom: 1px solid #ccc;
+}
+#about-main p, #about-main h2 {
+    color: #cccccc;
+}
+
+/* Common styles for both forms */
+.form-container {
+    background-image: url('static/images/parts-img.jpg'); /* Add your background image path here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+/* Styles for the Outsourced Part Form */
+#outsourced-form {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Styles for the Inhouse Part Form */
+#inhouse-form {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Additional styles for minInv and maxInv inputs */
+#minInv,
+#maxInv {
+    margin-top: 10px;
+}
+
+/* Apply styles to form buttons */
+.form-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #555;
+}
+
+

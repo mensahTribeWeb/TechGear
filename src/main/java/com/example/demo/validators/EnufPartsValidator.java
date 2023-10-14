@@ -11,20 +11,30 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 /**
- *
- *
- *
- *
+ * Custom validator for ensuring that adding or updating a product won't lower
+ * the associated part's inventory below the minimum.
  */
 public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, Product> {
     @Autowired
     private ApplicationContext context;
     public static  ApplicationContext myContext;
+    /**
+     * Initializes the custom validator.
+     *
+     * @param constraintAnnotation The constraint annotation.
+     */
     @Override
     public void initialize(ValidEnufParts constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
     }
-
+    /**
+     * Validates whether adding or updating a product would cause any associated
+     * part's inventory to fall below the minimum.
+     *
+     * @param product                The product to be validated.
+     * @param constraintValidatorContext The context in which the validation is executed.
+     * @return True if the validation passes; otherwise, false.
+     */
     @Override
     public boolean isValid(Product product, ConstraintValidatorContext constraintValidatorContext) {
         if(context==null) return true;

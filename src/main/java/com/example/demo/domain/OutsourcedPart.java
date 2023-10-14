@@ -4,10 +4,8 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 /**
- *
- *
- *
- *
+ * Represents an outsourced part in the inventory management system.
+ * This class is used to model parts that are purchased from external companies.
  */
 @Entity
 @DiscriminatorValue("2")

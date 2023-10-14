@@ -10,10 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
- *
- *
- *
+ * Represents a Product entity in the system.
+ * This class is used to model products and their attributes.
  */
 @Entity
 @Table(name="Products")
@@ -30,6 +28,10 @@ public class Product implements Serializable {
     int inv;
     @ManyToMany(cascade=CascadeType.ALL, mappedBy = "products")
     Set<Part> parts= new HashSet<>();
+    @Min(value = 0, message = "Minimum inventory value must be non-negative")
+    private Integer minInv;
+    @Min(value = 0, message = "Maximum inventory value must be non-negative")
+    private Integer maxInv;
 
     public Product() {
     }
@@ -45,6 +47,17 @@ public class Product implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+
+    }
+
+    public Product(long id, String name, double price, int inv, Set<Part> parts, Integer minInv, Integer maxInv) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.inv = inv;
+        this.parts = parts;
+        this.minInv = minInv;
+        this.maxInv = maxInv;
     }
 
     public long getId() {
@@ -85,6 +98,22 @@ public class Product implements Serializable {
 
     public void setParts(Set<Part> parts) {
         this.parts = parts;
+    }
+
+    public Integer getMinInv() {
+        return minInv;
+    }
+
+    public void setMinInv(Integer minInv) {
+        this.minInv = minInv;
+    }
+
+    public Integer getMaxInv() {
+        return maxInv;
+    }
+
+    public void setMaxInv(Integer maxInv) {
+        this.maxInv = maxInv;
     }
 
     public String toString(){

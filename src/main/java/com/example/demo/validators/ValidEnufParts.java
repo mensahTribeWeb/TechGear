@@ -8,10 +8,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * Custom validation annotation to ensure that adding or updating a product
+ * won't cause any associated part's inventory to fall below the minimum threshold.
  *
+ * This annotation should be used on the Product entity class and is validated
+ * using the EnufPartsValidator class.
  *
- *
- *
+ * @see com.example.demo.validators.EnufPartsValidator
  */
 @Constraint(validatedBy = {EnufPartsValidator.class})
 @Target({ElementType.TYPE})
