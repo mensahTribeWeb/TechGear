@@ -1,8 +1,7 @@
 package com.example.demo.bootstrap;
 
-import com.example.demo.domain.ConcretePart;
+import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
-import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
@@ -96,28 +95,38 @@ public class BootStrapData implements CommandLineRunner {
         outsourcedPartRepository.save(o);
 
             // Sample Parts
-            Part motherboard = new ConcretePart("Motherboard", 50.0, 10);
-        motherboard.setMinInv(0); // Set minimum inventory
-        motherboard.setMaxInv(20); // Set maximum inventory
-        ConcretePart cpu = new ConcretePart("CPU", 100.0, 15);
-        cpu.setMinInv(0); // Set minimum inventory
-        cpu.setMaxInv(30); // Set maximum inventory
-        ConcretePart ram = new ConcretePart("RAM", 30.0, 20);
-        ram.setMinInv(0); // Set minimum inventory
-        ram.setMaxInv(40); // Set maximum inventory
-        ConcretePart hardDrive = new ConcretePart("Hard Drive", 60.0, 12);
-        hardDrive.setMinInv(0); // Set minimum inventory
-        hardDrive.setMaxInv(24); // Set maximum inventory
-        ConcretePart graphicCard = new ConcretePart("Graphic Card", 80.0, 8);
-        graphicCard.setMinInv(0); // Set minimum inventory
-        graphicCard.setMaxInv(16); // Set maximum inventory
+            InhousePart motherboard = new InhousePart("Motherboard", 50.0, 10);
+            motherboard.setMinInv(0); // Set minimum inventory
+            motherboard.setMaxInv(20); // Set maximum inventory
+            InhousePart cpu = new InhousePart("CPU", 100.0, 15);
+            cpu.setMinInv(0); // Set minimum inventory
+            cpu.setMaxInv(30); // Set maximum inventory
+            InhousePart ram = new InhousePart("RAM", 30.0, 20);
+            ram.setMinInv(0); // Set minimum inventory
+            ram.setMaxInv(40); // Set maximum inventory
+            InhousePart hardDrive = new InhousePart("Hard Drive", 60.0, 12);
+            hardDrive.setMinInv(0); // Set minimum inventory
+            hardDrive.setMaxInv(24); // Set maximum inventory
+            InhousePart graphicCard = new InhousePart("Graphic Card", 80.0, 8);
+            graphicCard.setMinInv(0); // Set minimum inventory
+            graphicCard.setMaxInv(16); // Set maximum inventory
 
         // Sample Products
         Product desktop = new Product("Desktop", 500.0, 5);
+        desktop.setMinInv(0); // Set minimum inventory
+        desktop.setMaxInv(10); // Set maximum inventory
         Product laptop = new Product("Laptop", 700.0, 7);
+        laptop.setMinInv(0); // Set minimum inventory
+        laptop.setMaxInv(14); // Set maximum inventory
         Product mobilePhone = new Product("Mobile Phone", 300.0, 10);
+        mobilePhone.setMinInv(0); // Set minimum inventory
+        mobilePhone.setMaxInv(20); // Set maximum inventory
         Product tablet = new Product("Tablet", 400.0, 8);
+        tablet.setMinInv(0); // Set minimum inventory
+        tablet.setMaxInv(16); // Set maximum inventory
         Product monitor = new Product("Monitor", 200.0, 15);
+        monitor.setMinInv(0); // Set minimum inventory
+        monitor.setMaxInv(30); // Set maximum inventory
 
         // Save the parts and products to the repositories
             partRepository.saveAll(List.of(motherboard, cpu, ram, hardDrive, graphicCard));
