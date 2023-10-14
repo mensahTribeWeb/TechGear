@@ -61,6 +61,16 @@ public abstract class Part implements Serializable {
         this.inv = inv;
     }
 
+    public Part(long id, String name, double price, int inv, Integer minInv, Integer maxInv, Set<Product> products) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.inv = inv;
+        this.minInv = minInv;
+        this.maxInv = maxInv;
+        this.products = products;
+    }
+
     /**
      * Verifies if the inventory falls between the minimum and maximum inventory values.
      *
@@ -159,11 +169,6 @@ public abstract class Part implements Serializable {
 
     @Override
     public String toString() {
-        return "Part{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", inv=" + inv +
-                '}';
+        return name;
     }
 }
