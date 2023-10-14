@@ -20,28 +20,25 @@
 <p><input type="text" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
     <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
 
-<p><input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
+<p><input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4" min="1"/></p>
     <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
 
     <p><input type="text" th:field="*{companyName}" placeholder="Company Name" class="form-control mb-4 col-4"/></p>
 
 
-        <form action="#" th:action="@{/showFormAddOutPart}" th:object="${outsourcedpart}" method="POST">
-            <div class="form-group">
-                <label for="minInv">Minimum Inventory</label>
-                <input type="number" class="form-control" id="minInv" name="minInv" placeholder="Enter minimum inventory">
-            </div>
-            <div class="form-group">
-                <label for="maxInv">Maximum Inventory</label>
-                <input type="number" class="form-control" id="maxInv" name="maxInv" placeholder="Enter maximum inventory">
-            </div>
-        </form>
+    <div class="form-group">
+        <label for="minInv">Minimum Inventory</label>
+        <input type="number" class="form-control" id="minInv" th:field="*{minInv}" placeholder="Enter minimum inventory" min="1" required>
+    </div>
+    <div class="form-group">
+        <label for="maxInv">Maximum Inventory</label>
+        <input type="number" class="form-control" id="maxInv" th:field="*{maxInv}" placeholder="Enter maximum inventory" min="1"  required>
     </div>
 
-
-<p><input type="submit" value="Submit" /></p>
+    <p><input type="submit" value="Submit" /></p>
 </form>
 <a href="http://localhost:8080/">Link
     to Main Screen</a>
+</div>
 </body>
 </html>
