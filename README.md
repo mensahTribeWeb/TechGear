@@ -556,16 +556,102 @@ _
 #### **Line Number:**  _13-15, 36-52_
 #### **Change:**  _Add: javadoc and  getPartWithProducts_
 
-#### **File Name:** _README.md_
-#### **Line Number:**  _#_
+#### **File Name:** _Conrete.java, success-page.html, error-page.html_
+#### **Line Number:**  _remove, 1-15_
 #### **Change:**  _#_
 
+<br>
 
+## Refactor II
+
+#### **File Name:** _Concrete.java, success-page.html, error-page.html_
+#### **Line Number:**  _remove, 1-15_
+#### **Change:**  _Remove concrete class use OutsourcePart InhousePart, initial success/error page_
+
+#### **File Name:** _error-page.html, success-page.html_
+#### **Line Number:**  _1-15_
+#### **Change:**  _Add: error-page.html, success-page.html_
+<br>
+
+#### **File Name:** _BootStrapData.java_
+#### **Line Number:**  _98-129_
+#### **Change:**  _Add: setMinInv and maxInv for parts_
+<br>
+
+#### **File Name:** _AddInhousePartController.java_
+#### **Line Number:**  _56-80_
+#### **Change:**  _FixMe: working on the postMapping for AddInHouseController_
+<br>
+
+#### **File Name:** _AddOutsourcedPartController.java_
+#### **Line Number:**  _71-86_
+#### **Change:**  _Refactor: PostMapping Validation_
+<br>
+
+#### **File Name:** _AddPartController.java_
+#### **Line Number:**  _17-19, 25-31, 57-64_
+#### **Change:**  _Refactor: optimize imports and add javadocs_
+<br>
+
+#### **File Name:** _InhousePart.java_
+#### **Line Number:**  _23-31_
+#### **Change:**  _Add: javadoc and specified constructor based on starter parts in bootstrap_
+<br>
+
+#### **File Name:** _OutsourcedPart.java_
+#### **Line Number:**  _7-9_
+#### **Change:**  _Add: javadoc_
+<br>
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _64-73_
+#### **Change:**  _Add: constructor which includes minInventory and max inventory Using wrapper class to avoid null pointer exception_
+<br>
+
+#### **File Name:** _Product.java_
+#### **Line Number:**  _50-60, 106-118_
+#### **Change:**  _Add: constructor which includes minInventory and max inventory Using wrapper class to avoid null pointer exception, Add: getter and setters_
+<br>
+
+#### **File Name:** _OutsourcedPartService.java_
+#### **Line Number:**  _18_
+#### **Change:**  _Add: Implemented the addOutsourcedPart method to add an OutsourcedPart instance and return a boolean indicating success_
+<br>
+
+#### **File Name:** _OutsourcedPartServiceImpl.java_
+#### **Line Number:**  _59-84_
+#### **Change:**  _Add: outsourcedPart() with validation and exception handling_
+<br>
+
+#### **File Name:** _PartServiceImpl.java_
+#### **Line Number:**  _3-4_
+#### **Change:**  _Refactor: optimize imports_
+<br>
+
+#### **File Name:** _InhousePartForm.html_
+#### **Line Number:**  _23, 30, 34_
+#### **Change:**  _Add min values so negative values cannot be accessed_
+<br>
+
+#### **File Name:** _InhousePartForm.html_
+#### **Line Number:**  _31, 34_
+#### **Change:**  _Add min values so negative values cannot be accessed_
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _56-57, 66-67_
+#### **Change:**  _Add: min and max inventory fields, Display values_
+<br>
+
+#### **File Name:** _README.md_
+#### **Line Number:**  _559-649_
+#### **Change:**  _Validation should be added for adding inhouse and outsourced parts._
+<br>
 
 ### Web Links
 
-#### GitLab:  https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks.git
+#### [GitLab](https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks.git )
 
-#### Repository Graph: https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks/-/network/nick-dev
+#### [Repository Graph]( https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks/-/network/nick-dev)
 
-#### ReadMe: 
+#### [ReadMe]( https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks/-/blob/nick-dev/README.md?ref_type=heads)
