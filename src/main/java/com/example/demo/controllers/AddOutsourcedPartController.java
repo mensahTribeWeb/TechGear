@@ -69,17 +69,19 @@ public class AddOutsourcedPartController {
         return "redirect:/outsourcedparts/list";
     }
     @PostMapping("/addOutsourcedPart")
-    public String addOutsourcedPart(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart outsourcedPart, BindingResult bindingResult, Model theModel) {
+    public String addOutsourcedPart(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart outsourcedPart,
+                                    BindingResult bindingResult,
+                                    Model theModel) {
+        System.out.println("........................................................entry add outsource part");
         if (bindingResult.hasErrors()) {
+            // There are validation errors
             return "OutsourcedPartForm";
-        }
-
-        // Check if inventory is within the valid range
-        if (outsourcedPart.getInv() < outsourcedPart.getMinInv() || outsourcedPart.getInv() > outsourcedPart.getMaxInv()) {
-            // Display an error message
+        } else if (!outsourcedPart.isInvValid()) {
+            // Inventory validation failed
             theModel.addAttribute("errorMessage", "Error: Inventory couldn't be larger than the maximum or smaller than the minimum.");
             return "error-page"; // Redirect to an error page
         } else {
+            // No errors, save the outsourced part
             outsourcedPartService.save(outsourcedPart);
             return "success-page"; // Redirect to a success page
         }

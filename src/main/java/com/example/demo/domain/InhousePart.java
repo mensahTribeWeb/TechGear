@@ -1,5 +1,6 @@
 package com.example.demo.domain;
 
+import com.example.demo.validators.ValidInhousePart;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
@@ -9,6 +10,7 @@ import javax.persistence.Entity;
  */
 @Entity
 @DiscriminatorValue("1")
+@ValidInhousePart
 public class InhousePart extends Part{
     int partId;
 

@@ -53,31 +53,6 @@ public class AddInhousePartController {
         }
     }
 
-    @PostMapping("/addInhousePart")
-    public String addInhousePart(@Valid @ModelAttribute("inhousepart") InhousePart inhousePart, BindingResult bindingResult, Model theModel) {
-        if (bindingResult.hasErrors()) {
-            return "InhousePartForm";
-        }
-
-        // Check if minInv is less than or equal to maxInv
-        if (inhousePart.getMinInv() > inhousePart.getMaxInv()) {
-            // Display an error message
-            theModel.addAttribute("errorMessage", "Error: Minimum inventory cannot be greater than maximum inventory.");
-            return "error-page"; // Redirect to an error page
-        }
-
-        // Check if inventory is within the valid range
-        if (inhousePart.isInvValid()) {
-            inhousePartService.save(inhousePart);
-            return "success-page"; // Redirect to a success page
-        } else {
-            // Display an error message
-            theModel.addAttribute("errorMessage", "Error: Inventory couldn't be larger than the maximum or smaller than the minimum.");
-            return "error-page"; // Redirect to an error page
-        }
-    }
-
-
     /**
      * Handles saving an Inhouse Part, performing additional validation.
      *
@@ -85,20 +60,18 @@ public class AddInhousePartController {
      * @param bindingResult The binding result for validation.
      * @return The appropriate view based on validation results.
      */
-    @PostMapping("/saveInhousePart")
-    public String saveInhousePart(@Valid @ModelAttribute("inhousepart") InhousePart inhousePart, BindingResult bindingResult) {
+    @PostMapping("/addInhousePart")
+    public String addInhousePart(@Valid @ModelAttribute("inhousepart") InhousePart inhousePart,
+                                 BindingResult bindingResult,
+                                 Model theModel) {
         if (bindingResult.hasErrors()) {
             return "InhousePartForm";
         }
-
         if (!inhousePart.isInvValid()) {
-            bindingResult.rejectValue("inv", "inventory.invalid", "Inventory is outside the valid range.");
-            return "InhousePartForm";
+            theModel.addAttribute("errorMessage", "Error: Inventory couldn't be larger than the maximum or smaller than the minimum.");
+            return "error-page"; // Redirect to an error page
         }
-
-        // Save the inhouse part
         inhousePartService.save(inhousePart);
-
-        return "redirect:/inhouseparts/list";
+        return "success-page"; // Redirect to a success page
     }
 }
