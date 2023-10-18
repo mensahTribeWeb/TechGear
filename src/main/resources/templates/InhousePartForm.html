@@ -20,8 +20,9 @@
     <p><input type="text" path="price" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
     <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
 
-    <p><input type="text" path="inv" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4" min="1"/></p>
-    <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
+    <p th:text="${errorMessage}"></p>
+    <p><input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4" min="1"/></p>
+    <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}" class="error-message">Inventory Error: Please check the inventory range.</p>
 
     <p><input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/></p>
 
@@ -34,6 +35,10 @@
         <input type="number" class="form-control" id="maxInv" th:field="*{maxInv}" placeholder="Enter maximum inventory" min="1"  required>
     </div>
     <p><input type="submit" value="Submit" /></p>
+
+    <div th:if="${#fields.hasAnyErrors()}">
+        <ul><li th:each="err: ${#fields.allErrors()}" th:text="${err}" th:class="error-message"></li></ul>
+    </div>
 </form>
 <p><errors path="price" cssClass=""error/><p>
 
