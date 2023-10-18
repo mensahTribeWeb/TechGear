@@ -6,8 +6,8 @@
 </head>
 <body>
 <main th:id="error-page">
-    <h1>Addition Successful!</h1>
-    <p>Sorry, there was an error processing your Inventory update. Please try again later!</p>
+    <h1>Error</h1>
+    <p th:text="${errorMessage}"></p>
     <a href="http://localhost:8080/">Link
         to Main Screen</a>
 </main>
