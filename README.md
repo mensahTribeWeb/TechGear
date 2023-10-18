@@ -482,7 +482,6 @@ _
 
 <hr>
 
-
 #### **File Name:** _PriceProductValidator.java_
 #### **Line Number:**  _16-43, 55-61_
 #### **Change:**  _2usages Refactor: javadocs_
@@ -646,6 +645,114 @@ _
 #### **File Name:** _README.md_
 #### **Line Number:**  _559-649_
 #### **Change:**  _Validation should be added for adding inhouse and outsourced parts._
+<br>
+
+#### **File Name:** _pom.xml_
+#### **Line Number:**  _62-65_
+#### **Change:**  _Add: validation dependency_
+
+<br>
+
+#### **File Name:** _AddInhousePartController.java_
+#### **Line Number:**  _63-78_
+#### **Change:**  _Refactor: PostMapping to bind to inhousepart and add condition in which error will display_
+
+<br>
+
+#### **File Name:** _InhousePart.java_
+#### **Line Number:**  _3, 13_
+#### **Change:**  _Add: custom ValidInhousePart annotation_
+
+<br>
+
+#### **File Name:** _OutsourcedPart.java_
+#### **Line Number:**  _3, 13_
+#### **Change:**  _Add: custom ValidOutsourcedPart annotation_
+
+<br>
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _29_
+#### **Change:**  _Add: max value annotation_
+
+<br>
+
+#### **File Name:** _demo.css_
+#### **Line Number:**  _97-107, 15_
+#### **Change:**  _Refactor: container in the viewport, view of the body, title h2_
+
+<br>
+
+#### **File Name:** _OutsourcedPartForm.html, InhousePartForm.html_
+#### **Line Number:**  _23-25, 40-44_
+#### **Change:**  _Add: add error handling servlet_
+
+<br>
+
+#### **File Name:** _error-page.html_
+#### **Line Number:**  _1-15_
+#### **Change:**  _Add: error-page practice controller view default error-page_
+
+<br>
+
+#### **File Name:** _mainscreen.html_
+#### **Line Number:**  _39, 80_
+#### **Change:**  _Add: class for css access_
+
+<br>
+
+#### **File Name:** _productForm.html_
+#### **Line Number:**  _74_
+#### **Change:**  _Add link to home page_
+
+<br>
+
+#### **File Name:** _success-page.html_
+#### **Line Number:**  _8_
+#### **Change:**  _Add: id for potential css and identification_
+
+<br>
+
+#### **File Name:** _PartTest.java_
+#### **Line Number:**  _181-255_
+#### **Change:**  _Add: Test to validate min/max range for practice_
+
+<br>
+
+#### **File Name:** _ErrorController.java_
+#### **Line Number:**  _1-12_
+#### **Change:**  _Add: controller error page for practice_
+
+<br>
+
+#### **File Name:** _ValidInhousePart.java_
+#### **Line Number:**  _1-9_
+#### **Change:**  _Add: custom inhousePart validation interface_
+
+<br>
+
+#### **File Name:** _ValidInhousePartValidator.java_
+#### **Line Number:**  _1-26_
+#### **Change:**  _Add: custom inhousePart validation_
+
+<br>
+
+#### **File Name:** _ValidOutsourcedPart.java_
+#### **Line Number:**  _1-17_
+#### **Change:**  _Add: custom outsourcePart validation interface_
+
+<br>
+
+#### **File Name:** _ValidOutsourcedPartValidator.java_
+#### **Line Number:**  _1-17_
+#### **Change:**  _Add: custom outsourcePart validation_
+
+<br>
+
+#### **File Name:** _README.md_
+#### **Line Number:**  _649-756_
+#### **Change:**  _Fix validation error and practice_
+
 <br>
 
 ### Web Links
