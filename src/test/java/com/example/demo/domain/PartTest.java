@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -27,6 +29,7 @@ class PartTest {
         partIn=new InhousePart();
         partOut=new OutsourcedPart();
     }
+
     @Test
     void getId() {
         Long idValue=4L;
@@ -174,4 +177,50 @@ class PartTest {
 
         assertEquals(maximumInv, partOut.getMaxInv());
     }
+
+    @Test
+    void testIsInvValidWithinRange() {
+        Part partIn = new InhousePart();
+        partIn.setMinInv(5);
+        partIn.setMaxInv(10);
+        partIn.setInv(7);
+        assertTrue(partIn.isInvValid());
+
+        Part partOut = new OutsourcedPart();
+        partOut.setMinInv(5);
+        partOut.setMaxInv(10);
+        partOut.setInv(7);
+        assertTrue(partOut.isInvValid());
+    }
+
+    @Test
+    void testIsInvValidBelowMin() {
+        Part partIn = new InhousePart();
+        partIn.setMinInv(5);
+        partIn.setMaxInv(10);
+        partIn.setInv(3);
+        assertFalse(partIn.isInvValid());
+
+        Part partOut = new OutsourcedPart();
+        partOut.setMinInv(5);
+        partOut.setMaxInv(10);
+        partOut.setInv(3);
+        assertFalse(partOut.isInvValid());
+    }
+
+    @Test
+    void testIsInvValidAboveMax() {
+        Part partIn = new InhousePart();
+        partIn.setMinInv(5);
+        partIn.setMaxInv(10);
+        partIn.setInv(12);
+        assertFalse(partIn.isInvValid());
+
+        Part partOut = new OutsourcedPart();
+        partOut.setMinInv(5);
+        partOut.setMaxInv(10);
+        partOut.setInv(12);
+        assertFalse(partOut.isInvValid());
+    }
+
 }
