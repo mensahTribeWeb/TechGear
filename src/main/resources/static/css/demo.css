@@ -173,7 +173,7 @@ table td {
     border: 1px solid #cccccc !important; /* Add borders to table cells */
     background-color: #333333 !important;
     color: #cccccc !important;
-    padding: 10%;
+    padding: 15%;
 }
 
 
@@ -214,7 +214,6 @@ input {
 .form-title {
     font-size: 24px;
     margin-bottom: 20px;
-
 }
 
 .form-group {
