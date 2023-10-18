@@ -36,7 +36,7 @@
 <!--    <hr>-->
     <section th:id="tech-gear-parts">
 
-            <h2>TechGear Parts</h2>
+            <h2 th:class="tech-gear-parts-h2">TechGear Parts</h2>
             <form th:action="@{/mainscreen}">
                 Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
                 &nbsp;
@@ -77,7 +77,7 @@
     </section>
 
     <section th:id="tech-gear-products">
-    <h2>TechGear Products</h2>
+    <h2 th:class="tech-gear-products-h2">TechGear Products</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
         &nbsp;
