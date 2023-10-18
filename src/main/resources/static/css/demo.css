@@ -12,6 +12,7 @@ hr {
 body {
     margin: 0;
     width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     background-color: rgba(31, 31, 31, 0.94) !important;
 
@@ -95,6 +96,15 @@ nav {
 
 .container {
     scroll-snap-align: start;
+    max-width: 100vw; /* Set a maximum width equal to the viewport width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #333333;
+    color: #cccccc;
+    overflow-x: hidden;
+    margin: 0 auto;
+    width: 800px;
 }
 
 *******************************************************************************,
@@ -128,18 +138,18 @@ nav {
     scroll-snap-align: start;
     max-width: 100vw;
     display: flex;
-
-    flex-direction: row;
     height: 100vh;
+    flex-direction: row;
     align-items: center;
     background: #333333;
     color: #cccccc;
     overflow-x: hidden;
     margin: 0 auto;
-    width: 800px;
 }
 
-h2 {
+.tech-gear-products-h2,
+.tech-gear-parts-h2{
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -154,6 +164,7 @@ form {
     max-width: 80%;
     color: #cccccc;
     table-layout: fixed;
+    padding: 0;
 }
 
 table th,
@@ -162,6 +173,7 @@ table td {
     border: 1px solid #cccccc !important; /* Add borders to table cells */
     background-color: #333333 !important;
     color: #cccccc !important;
+    padding: 10%;
 }
 
 
@@ -172,7 +184,7 @@ input {
 #tech-gear-parts,
 #tech-gear-products {
 
-    height: 100vh; /* 100% of the viewport height */
+    height: auto;
     background: #333333;
     color: #cccccc;
     text-align: center; /* Center-align its child elements */
@@ -190,7 +202,7 @@ input {
 
 /* Common styles for both forms */
 .form-container {
-    background-image: url('static/images/parts-img.jpg'); /* Add your background image path here */
+    background-image: url('static/images/parts-img.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -202,6 +214,7 @@ input {
 .form-title {
     font-size: 24px;
     margin-bottom: 20px;
+
 }
 
 .form-group {
@@ -250,4 +263,8 @@ input {
     background-color: #555;
 }
 
-
+@media (min-width: 760px) {
+    .container {
+        width: 800px; /* Set the fixed width to 760px or your desired minimum width */
+    }
+}
