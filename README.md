@@ -755,6 +755,25 @@ _
 
 <br>
 
+Fixed me 5
+#### **File Name:** _ValidInhousePart.java_
+#### **Line Number:**  _5-8, 10-12_
+#### **Change:**  _Fix: Add: import and annotations for constraints, target, and retention_
+
+<br>
+
+#### **File Name:** _README.md_
+#### **Line Number:**  _649-756_
+#### **Change:**  _Fix validation error and practice_
+
+<br>
+
+#### **File Name:** _README.md_
+#### **Line Number:**  _757-775_
+#### **Change:**  _Fix validation error for InhousePart_
+
+<br>
+
 ### Web Links
 
 #### [GitLab](https://gitlab.com/wgu-gitlab-environment/student-repos/mensahTribeWeb/d287-java-frameworks.git )
