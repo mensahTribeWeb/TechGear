@@ -2,7 +2,6 @@ package com.example.demo.controllers;
 
 import com.example.demo.domain.InhousePart;
 import com.example.demo.service.InhousePartService;
-import com.example.demo.service.InhousePartServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -74,4 +73,50 @@ public class AddInhousePartController {
         inhousePartService.save(inhousePart);
         return "success-page"; // Redirect to a success page
     }
+
+    /**
+     * Handles the creation or update of an In-house part.
+     *
+     * This method is mapped to the POST request at "/createOrUpdateInhousePart". It validates the provided InhousePart object,
+     * checks and sets valid values for minInv and maxInv if they are null, and ensures that the inventory is within the
+     * specified minimum and maximum values. If all checks pass, the InhousePart is saved. If any errors occur during this process,
+     * an error message is displayed.
+     *
+     * @param inhousePart    The InhousePart object to be created or updated.
+     * @param bindingResult  The result of the validation process.
+     * @param theModel       The Model for adding attributes or error messages.
+     * @return               A string indicating the view to display based on the result of the operation.
+     */
+    @PostMapping("/createOrUpdateInhousePart")
+    public String createOrUpdateInhousePart(@Valid @ModelAttribute("inhousePart") InhousePart inhousePart, BindingResult bindingResult, Model theModel) {
+        if (bindingResult.hasErrors()) {
+            // Handle validation errors
+            return "InhousePartForm";
+        }
+
+        // Check and set valid values for minInv and maxInv if they are null
+        if (inhousePart.getMinInv() == null) {
+            inhousePart.setMinInv(1); // Provide a default or valid value
+        }
+
+        if (inhousePart.getMaxInv() == null) {
+            inhousePart.setMaxInv(1000); // Provide a default or valid value
+        }
+
+        // Check the condition that inventory is within the min and max values
+        if (!inhousePart.isInvValid()) {
+            theModel.addAttribute("errorMessage", "Error: Inventory couldn't be larger than the maximum or smaller than the minimum.");
+            return "error-page"; // Redirect to an error page
+        }
+
+        // Now, you can save the inhousePart
+        try {
+            inhousePartService.save(inhousePart);
+            return "success-page"; // Redirect to a success page
+        } catch (Exception e) {
+            // Handle the exception, e.g., log it or return an error page
+            return "error-page";
+        }
+    }
+
 }
