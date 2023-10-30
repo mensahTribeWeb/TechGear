@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidOutsourcedPart {
-    String message() default "Error: Inventory couldn't be larger than the maximum or smaller than the minimum.";
+    String message() default "Error: Inventory cannot be larger than the maximum or smaller than the minimum.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
