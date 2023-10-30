@@ -16,8 +16,13 @@ public class ValidInhousePartValidator implements ConstraintValidator<ValidInhou
             return true; // Null values will be handled by other validation annotations.
         }
 
-        int minInv = inhousePart.getMinInv();
-        int maxInv = inhousePart.getMaxInv();
+        Integer minInv = inhousePart.getMinInv();
+        Integer maxInv = inhousePart.getMaxInv();
+
+        if (minInv == null || maxInv == null) {
+            return false; // Handle the case when minInv or maxInv is null.
+        }
+
         int inv = inhousePart.getInv();
 
         // Perform your validation logic here

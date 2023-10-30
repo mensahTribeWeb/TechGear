@@ -4,7 +4,7 @@
 *  **Parts:** MotherBoards, CPUs, RAM, Hard Drive, Graphic Cards
 
 - outline for notes
-- 
+
 #### **File Name:** _#_
 #### **Line Number:**  _#_
 #### **Change:**  _#_
@@ -773,6 +773,63 @@ Fixed me 5
 #### **Change:**  _Fix validation error for InhousePart_
 
 <br>
+
+#### **File Name:** _AddInhousePartController.java_
+#### **Line Number:**  _76-121, 115,_
+#### **Change:**  _Fixed Post mapping with javadocs, Refactored: to inhousePartForm or error-page_
+
+#### **File Name:** _AddProductController.java_
+#### **Line Number:**  _113_
+#### **Change:**  _Refactor: inject productService_
+
+#### **File Name:** _InhousePart.java_
+#### **Line Number:**  _36-40_
+#### **Change:**  _Refactor: Add constructor_
+
+#### **File Name:** _Part.java_
+#### **Line Number:**  _29, 33, 35, 40_
+#### **Change:**  _Refactor: optimize imports, fix grammar in validation messages_
+
+#### **File Name:** _AboutRepository.java, InhousePartRepository.java, OutsourcedPartRepository.java, PartRepository.java, ProductRepository.java_
+#### **Line Number:**  _7,3_
+#### **Change:**  _Refactor: Add Import and Repository annotations_
+
+#### **File Name:** _EnufPartsValidator.java_
+#### **Line Number:**  _47-49_
+#### **Change:**  _Refactor: iterates through inhouseParts and_
+
+#### **File Name:** _EnufPartsValidator.java_
+#### **Line Number:**  _47-49_
+#### **Change:**  _Refactor: iterate through inhousePart create an constructor if present_
+
+#### **File Name:** _ValidInhousePart.java_
+#### **Line Number:**  _14_
+#### **Change:**  _Refactor: adjust Error message grammar_
+
+#### **File Name:** _ValidInhousePartValidator.java_
+#### **Line Number:**  _19-29_
+#### **Change:**  _Refactor: adjust validation to catch null values_
+
+#### **File Name:** _ValidOutsourcedPart.java_
+#### **Line Number:**  _14_
+#### **Change:**  _Refactor: adjust Error message grammar_
+
+#### **File Name:** _ValidOutsourcedPart.java_
+#### **Line Number:**  _19-26_
+#### **Change:**  _Refactor: adjust validation for min max values_
+
+#### **File Name:** _ValidOutsourcedPartValidator.java_
+#### **Line Number:**  _19-26_
+#### **Change:**  _Refactor: adjust validation for min max values_
+
+#### **File Name:** _application.properties_
+#### **Line Number:**  _15-20_
+#### **Change:**  _Add: properties for errors and logging_
+
+#### **File Name:** _README.md_
+#### **Line Number:**  _777-833_
+#### **Change:**  _Refactor: solution for attempt 4_
+
 
 ### Web Links
 

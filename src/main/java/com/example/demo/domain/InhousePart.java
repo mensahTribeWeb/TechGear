@@ -3,6 +3,7 @@ package com.example.demo.domain;
 import com.example.demo.validators.ValidInhousePart;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import java.util.Set;
 
 /**
  * Represents an in-house part in the system, extending the base Part class.
@@ -30,6 +31,11 @@ public class InhousePart extends Part{
      */
     public InhousePart(String name, double price, int inv) {
         super(name, price, inv);
+    }
+
+    public InhousePart(long id, String name, double price, int inv, Integer minInv, Integer maxInv, Set<Product> products, int partId) {
+        super(id, name, price, inv, minInv, maxInv, products);
+        this.partId = partId;
     }
 
     public int getPartId() {

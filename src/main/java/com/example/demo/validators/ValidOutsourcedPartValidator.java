@@ -16,9 +16,13 @@ public class ValidOutsourcedPartValidator implements ConstraintValidator<ValidOu
             return true; // Null values will be handled by other validation annotations.
         }
 
-        int minInv = outsourcedPart.getMinInv();
-        int maxInv = outsourcedPart.getMaxInv();
+        Integer minInv = outsourcedPart.getMinInv();
+        Integer maxInv = outsourcedPart.getMaxInv();
         int inv = outsourcedPart.getInv();
+
+        if (minInv == null || maxInv == null) {
+            return false; // Handle the case when minInv or maxInv is null.
+        }
 
         // Perform your validation logic here
         return inv >= minInv && inv <= maxInv;
