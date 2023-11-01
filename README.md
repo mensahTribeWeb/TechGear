@@ -830,6 +830,13 @@ Fixed me 5
 #### **Line Number:**  _777-833_
 #### **Change:**  _Refactor: solution for attempt 4_
 
+<br>
+
+#### **File Name:** _AddProductController.java_
+#### **Line Number:**  _75-84_
+#### **Change:**  _Add: logic to decrease parts as it is added to products_
+
+<br
 
 ### Web Links
 

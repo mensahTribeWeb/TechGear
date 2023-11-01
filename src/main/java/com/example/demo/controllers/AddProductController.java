@@ -67,11 +67,21 @@ public class AddProductController {
                 System.out.println(p.getMinInv());
                 System.out.println(p.getMaxInv());
                 System.out.println("-------------");
-                if(newProductInv < p.getMinInv() || newProductInv > p.getMaxInv()){
+                if(newProductInv > (p.getInv() - p.getMinInv())){
                     return "error-page";
                 }
             }
             product.getParts().addAll(product1.getParts());
+            for(Part p : product.getParts()){
+                p.setInv(p.getInv() - newProductInv);
+                partService.save(p);
+            }
+
+            for (Part p : partService.findAll()) {
+                int newPartInv = p.getInv() - newProductInv;
+                p.setInv(newPartInv);
+                partService.save(p);
+            }
             productService.save(product);
             return "redirect:/";
         }
