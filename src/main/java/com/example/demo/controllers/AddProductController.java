@@ -67,7 +67,7 @@ public class AddProductController {
                 System.out.println(p.getMinInv());
                 System.out.println(p.getMaxInv());
                 System.out.println("-------------");
-                if(newProductInv > (p.getInv() - p.getMinInv())){
+                if(newProductInv > (p.getInv() - p.getMinInv()) || newProductInv < (p.getInv() - p.getMinInv())){
                     return "error-page";
                 }
             }
