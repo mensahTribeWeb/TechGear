@@ -57,20 +57,27 @@ public class AddProductController {
             if( bindingResult.hasErrors()){
                 return "productForm";
             }
+            if (product1 == null) {
+                product1 = new Product();
+            }
             int productInventory = product.getInv();
             int newProductInv = productInventory - initProductInventory;
 
             System.out.println(newProductInv);
             System.out.println(assoParts);
-            for(Part p : product1.getParts()) {
-                System.out.println("-------------");
-                System.out.println(p.getMinInv());
-                System.out.println(p.getMaxInv());
-                System.out.println("-------------");
-                if(newProductInv > (p.getInv() - p.getMinInv()) || newProductInv < (p.getInv() - p.getMinInv())){
-                    return "error-page";
+
+            if (product1.getParts() != null) {
+                for (Part p : product1.getParts()) {
+                    System.out.println("-------------");
+                    System.out.println(p.getMinInv());
+                    System.out.println(p.getMaxInv());
+                    System.out.println("-------------");
+                    if (newProductInv > (p.getInv() - p.getMinInv()) || newProductInv < (p.getInv() - p.getMaxInv())) {
+                        return "error-page";
+                    }
                 }
             }
+
             product.getParts().addAll(product1.getParts());
             for(Part p : product.getParts()){
                 p.setInv(p.getInv() - newProductInv);
