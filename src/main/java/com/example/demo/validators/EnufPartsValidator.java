@@ -47,8 +47,9 @@ public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, P
                 if(p instanceof InhousePart){
                     InhousePart inhousePart = new InhousePart(p.getId(), p.getName(), p.getPrice(), p.getInv(), p.getMinInv(), p.getMaxInv(), p.getProducts() ,((InhousePart) p).getPartId());
                 }
-                if ((p.getInv() - p.getMinInv())<(product.getInv()-myProduct.getInv()))
+                if ((p.getInv() - p.getMinInv())<(product.getInv()-myProduct.getInv())) {
                     return false;
+                }
             }
             return true;
         }
