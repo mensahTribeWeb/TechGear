@@ -65,30 +65,28 @@ public class AddProductController {
 
             System.out.println(newProductInv);
             System.out.println(assoParts);
+            product.getParts().addAll(product1.getParts());
 
-            if (product1.getParts() != null) {
-                for (Part p : product1.getParts()) {
-                    System.out.println("-------------");
-                    System.out.println(p.getMinInv());
-                    System.out.println(p.getMaxInv());
-                    System.out.println("-------------");
-                    if (newProductInv > (p.getInv() - p.getMinInv()) || newProductInv < (p.getInv() - p.getMaxInv())) {
-                        return "error-page";
+            if (newProductInv > 0) {
+
+                if (product1.getParts() != null) {
+                    for (Part p : product1.getParts()) {
+                        System.out.println("-------------");
+                        System.out.println(p.getMinInv());
+                        System.out.println(p.getMaxInv());
+                        System.out.println("-------------");
+                        if (newProductInv > (p.getInv() - p.getMinInv()) || newProductInv < (p.getInv() - p.getMaxInv())) {
+                            return "error-page";
+                        }
                     }
+                }
+
+                for(Part p : product.getParts()){
+                    p.setInv(p.getInv() - newProductInv);
+                    partService.save(p);
                 }
             }
 
-            product.getParts().addAll(product1.getParts());
-            for(Part p : product.getParts()){
-                p.setInv(p.getInv() - newProductInv);
-                partService.save(p);
-            }
-
-            for (Part p : partService.findAll()) {
-                int newPartInv = p.getInv() - newProductInv;
-                p.setInv(newPartInv);
-                partService.save(p);
-            }
             productService.save(product);
             return "redirect:/";
         }
