@@ -1,5 +1,9 @@
 # TechGear Builders Shop
 
+![tech-gear](https://github.com/mensahTribeWeb/TechGear/assets/103342287/fc8139f2-b57c-4c1c-bbdf-63587ea27a05)
+![Screenshot 2023-10-14 125718](https://github.com/mensahTribeWeb/TechGear/assets/103342287/d96c5ee1-91b3-4e49-99c8-66881960eb2e)
+
+
 *  **Product:** Desktops, Laptops, Mobile Phone, Tablet, Monitor
 *  **Parts:** MotherBoards, CPUs, RAM, Hard Drive, Graphic Cards
 
